@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Interrogatório | Página Oculta</title>
+  <title>Depoimentos | Página Oculta</title>
   <link rel="icon" type="image/png" href="../images/logo-branca.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,28 +11,34 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../horror.css">
   <link rel="stylesheet" href="../case.css">
-  <link rel="stylesheet" href="interrogatorio.css">
+  <link rel="stylesheet" href="depoimentos.css">
 </head>
 <body class="case-body">
   <div class="noise"></div>
   <header class="nav container">
     <a class="brand" href="../index.html"><img src="../images/logo-branca.png" alt="Página Oculta"></a>
-    <button class="nav-link exit-case" type="button">sair ↗</button>
+    <a class="nav-link" href="../casoresolvido/">resolver o caso <span>↗</span></a>
   </header>
-  <main class="container interrogation">
+  <main class="container statements-page">
     <div class="case-heading">
-      <p class="eyebrow">caso 08—14 · arquivo de interrogatório</p>
-      <h1>Quem você quer<br><em>questionar?</em></h1>
-      <p>Selecione um dos envolvidos. Cada depoimento pode mudar o rumo da investigação.</p>
+      <p class="eyebrow">caso 08—14 · arquivo de depoimentos</p>
+      <h1>Leia os<br><em>depoimentos.</em></h1>
+      <p>Escolha um envolvido para consultar seu relato inicial. Cada palavra pode ser uma pista.</p>
     </div>
-    <section class="suspects" id="suspects" aria-label="Suspeitos"></section>
-    <section class="question-panel">
-      <div class="question-top"><div><p class="eyebrow">interrogatório em andamento</p><h2 id="name">Carregando...</h2></div><p id="role"></p></div>
-      <div class="questions" id="questions"></div>
-      <div class="answer" id="answer" aria-live="polite"><span>resposta</span><p>Escolha uma pergunta para consultar o depoimento.</p></div>
+    <section class="suspects" id="suspects" aria-label="Envolvidos"></section>
+    <section class="testimony-panel" aria-live="polite">
+      <div class="question-top">
+        <div><p class="eyebrow">depoimento registrado</p><h2 id="name">Carregando...</h2></div>
+        <p id="role"></p>
+      </div>
+      <div class="testimony-copy">
+        <span>transcrição</span>
+        <p id="testimony" aria-label="Depoimento"></p><i class="typing-cursor" aria-hidden="true"></i>
+      </div>
+      <button class="replay" id="replay" type="button">reler depoimento ↻</button>
     </section>
   </main>
   <div class="case-lock" id="case-access" aria-modal="true" role="dialog"></div>
-  <script src="interrogatorio.js"></script>
+  <script src="depoimentos.js"></script>
 </body>
 </html>

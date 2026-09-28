@@ -34,7 +34,6 @@ const showAccess = () => {
   access.querySelectorAll('[data-key]').forEach((button) => button.onclick = () => { const key = button.dataset.key; pin = key === 'clear' ? '' : key === 'back' ? pin.slice(0, -1) : pin.length < 4 ? pin + key : pin; dots.textContent = [0,1,2,3].map(i => i < pin.length ? '●' : '○').join(' '); if (pin.length === 4) { if (pin === '0307') { access.remove(); } else { error.textContent = 'senha incorreta · acesso negado'; pin = ''; setTimeout(() => dots.textContent = '○ ○ ○ ○', 450); } } });
 };
 showAccess();
-document.querySelector('.exit-case').onclick = () => window.location.reload();
 
 const questions = document.querySelector('#questions'), name = document.querySelector('#name'), role = document.querySelector('#role'), area = document.querySelector('#suspects');
 const renderSuspect = (suspect) => {

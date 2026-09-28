@@ -142,7 +142,6 @@ function showAccess() {
       dots.textContent = [0, 1, 2, 3].map(index => index < pin.length ? '●' : '○').join(' ');
       if (pin.length !== 4) return;
       if (pin === '0307') {
-        sessionStorage.setItem('quarto307', 'ok');
         access.remove();
       } else {
         error.textContent = 'senha incorreta · acesso negado';
@@ -152,7 +151,7 @@ function showAccess() {
     };
   });
 }
-if (sessionStorage.getItem('quarto307') === 'ok') access.remove(); else showAccess();
+showAccess();
 
 function typeText(text) {
   clearInterval(typingTimer);

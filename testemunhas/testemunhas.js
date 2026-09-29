@@ -1,4 +1,3 @@
-// Coloque seus arquivos de áudio na pasta "testemunhas/audios" e atualize os nomes abaixo.
 const witnesses = [
   { id: '01', title: 'Testemunha 01', note: 'Registro enviado sem identificação.', audio: 'audios/testemunha-01.mp3' },
   { id: '02', title: 'Testemunha 02', note: 'Voz alterada para preservar a fonte.', audio: 'audios/testemunha-02.mp3' },

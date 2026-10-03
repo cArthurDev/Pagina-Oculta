@@ -1,0 +1,37 @@
+QR CODES - PAGINA OCULTA
+
+Cada PNG corresponde ao link indicado abaixo.
+As paginas internas mantem o fluxo de acesso com senha do site.
+
+pagina-inicial.png
+https://pagina-oculta.vercel.app/
+
+o-quarto-307-pagina-do-caso.png
+https://pagina-oculta.vercel.app/oquarto307/
+
+o-quarto-307-interrogatorio.png
+https://pagina-oculta.vercel.app/oquarto307/interrogatorio/
+
+o-quarto-307-testemunhas.png
+https://pagina-oculta.vercel.app/oquarto307/testemunhas/
+
+o-quarto-307-depoimentos.png
+https://pagina-oculta.vercel.app/oquarto307/depoimentos/
+
+o-quarto-307-caso-resolvido.png
+https://pagina-oculta.vercel.app/oquarto307/casoresolvido/
+
+o-homem-da-casa-ao-lado-pagina-do-caso.png
+https://pagina-oculta.vercel.app/o-homem-da-casa-ao-lado/
+
+o-homem-da-casa-ao-lado-celular.png
+https://pagina-oculta.vercel.app/o-homem-da-casa-ao-lado/celular/
+
+o-homem-da-casa-ao-lado-interrogatorio.png
+https://pagina-oculta.vercel.app/o-homem-da-casa-ao-lado/interrogatorio/
+
+o-homem-da-casa-ao-lado-depoimentos.png
+https://pagina-oculta.vercel.app/o-homem-da-casa-ao-lado/depoimentos/
+
+o-homem-da-casa-ao-lado-caso-resolvido.png
+https://pagina-oculta.vercel.app/o-homem-da-casa-ao-lado/casoresolvido/

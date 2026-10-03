@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR" data-caso="quarto307" data-secao="interrogatorio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Interrogatório | Página Oculta</title>
+  <link rel="icon" type="image/png" href="../../images/logo-branca.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../horror.css">
+  <link rel="stylesheet" href="../../case.css">
+  <link rel="stylesheet" href="interrogatorio.css">
+  <script src="../../casos.js"></script>
+  <script src="../../acesso/controle.js"></script>
+</head>
+<body class="case-body">
+  <div class="noise"></div>
+  <header class="nav container">
+    <a class="brand" href="../../index.html"><img src="../../images/logo-branca.png" alt="Página Oculta"></a>
+  </header>
+  <main class="container interrogation">
+    <div class="case-heading">
+      <p class="eyebrow">caso 08—14 · arquivo de interrogatório</p>
+      <h1>Quem você quer<br><em>questionar?</em></h1>
+      <p>Selecione um dos envolvidos. Cada depoimento pode mudar o rumo da investigação.</p>
+    </div>
+    <section class="suspects" id="suspects" aria-label="Suspeitos"></section>
+    <section class="question-panel">
+      <div class="question-top"><div><p class="eyebrow">interrogatório em andamento</p><h2 id="name">Carregando...</h2></div><p id="role"></p></div>
+      <div class="questions" id="questions"></div>
+    </section>
+  </main>
+  <script src="interrogatorio.js"></script>
+</body>
+</html>

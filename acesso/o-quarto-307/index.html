@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR" data-caso="quarto307">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Acesso ao caso | Página Oculta</title>
+  <link rel="icon" type="image/png" href="../../images/logo-branca.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../horror.css">
+  <link rel="stylesheet" href="../acesso.css">
+  <script src="../../casos.js" defer></script>
+  <script src="../acesso.js" defer></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <main class="access-wrap">
+    <a class="brand" href="../../index.html"><img src="../../images/logo-branca.png" alt="Página Oculta"></a>
+    <article class="access-card" id="case-card">
+      <span id="case-code"></span>
+      <p>acesso restrito</p>
+      <h1 id="case-title"></h1>
+    </article>
+    <button class="access-open" id="open-pin" type="button">ABRIR</button>
+    <section id="pin-area" hidden aria-labelledby="pin-title">
+      <h2 id="pin-title">Digite a senha</h2>
+      <p>Use o código de acesso do seu caso.</p>
+      <form id="access-form">
+        <label class="case-choice" for="password">Senha do caso</label>
+        <input id="password" type="password" inputmode="numeric" autocomplete="off" required>
+        <div class="keypad" id="keypad" aria-label="Teclado numérico"></div>
+        <button class="access-open" type="submit">ENTRAR</button>
+      </form>
+      <button class="back" id="back" type="button">← escolher caso</button>
+    </section>
+    <p class="lock-error" id="error" role="status" aria-live="polite"></p>
+    <noscript>Ative o JavaScript para acessar seu caso.</noscript>
+  </main>
+</body>
+</html>

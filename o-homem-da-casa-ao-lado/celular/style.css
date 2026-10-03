@@ -1,0 +1,657 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    user-select: none; /* Previne selecionar texto no celular */
+}
+
+body {
+    background-color: #0f1115; /* Fundo escuro como uma mesa de investigação */
+    background-image: radial-gradient(circle at 50% 50%, #1a1d24 0%, #050608 100%);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.voltar-jogo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.voltar-jogo:hover {
+    color: #fff;
+}
+
+/* Container Físico do Celular */
+.ambiente {
+    perspective: 1000px;
+}
+
+.phone-container {
+    width: 380px;
+    height: 770px;
+    background-color: #000;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 0 0 0 4px #1a1a1a, 
+                0 0 0 5px #444, 
+                0 20px 40px rgba(0,0,0,0.8),
+                inset 0 0 10px rgba(255,255,255,0.1);
+    position: relative;
+}
+
+/* Detalhes de hardware do celular */
+.phone-notch {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 0 0 15px 15px;
+    z-index: 100;
+}
+
+.phone-button-left {
+    position: absolute;
+    left: -6px;
+    top: 120px;
+    width: 3px;
+    height: 40px;
+    background: #333;
+    border-radius: 5px 0 0 5px;
+}
+
+.phone-button-right {
+    position: absolute;
+    right: -6px;
+    top: 150px;
+    width: 3px;
+    height: 60px;
+    background: #333;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Tela do Celular */
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #222;
+}
+
+/* Barra de Status */
+.status-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 90;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.status-icons {
+    display: flex;
+    gap: 5px;
+}
+
+/* Telas do SO (Gerenciamento) */
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+    background-color: #000;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+
+.screen.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+}
+
+.screen.inactive-left {
+    transform: translateX(-30%);
+    opacity: 0.5;
+}
+
+/* Tela Inicial */
+#lock-screen {
+    isolation: isolate;
+    background: #171d2c;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+}
+#lock-screen * { font-family: inherit; }
+#lock-screen::before {
+    content: '';
+    position: absolute;
+    inset: -30px;
+    z-index: -1;
+    background: linear-gradient(160deg, #18264188, #080e24bb), url('galeria/foto-07.png') center/cover;
+    filter: blur(28px) saturate(.8);
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+.unlock-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 78px 28px 48px;
+    text-align: center;
+}
+.passcode-lock { width: 25px; height: 31px; flex-shrink: 0; margin-bottom: 24px; }
+.unlock-form h2 { font-size: 23px; font-weight: 400; letter-spacing: -.4px; }
+.passcode-dots { display: flex; gap: 24px; margin-top: 25px; }
+.passcode-dots span { width: 13px; height: 13px; border: 1.5px solid #fff; border-radius: 50%; transition: background .12s; }
+.passcode-dots span.filled { background: #fff; }
+.passcode-keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 18px 25px;
+    margin-top: 52px;
+}
+.passcode-keypad button {
+    width: 80px;
+    height: 80px;
+    border: 0;
+    border-radius: 50%;
+    background: #ffffff28;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: background .15s, transform .15s;
+    -webkit-tap-highlight-color: transparent;
+}
+.passcode-keypad button span { font-size: 36px; font-weight: 300; line-height: 40px; }
+.passcode-keypad button small { font-size: 9px; font-weight: 600; letter-spacing: 2px; padding-left: 2px; }
+.passcode-keypad button[data-digit="0"] { grid-column: 2; }
+.passcode-keypad button:hover { background: #ffffff38; }
+.passcode-keypad button:active { background: #ffffff65; transform: scale(.96); }
+.unlock-form button:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+.passcode-actions { display: flex; justify-content: space-between; width: 100%; margin-top: auto; padding-top: 20px; }
+.passcode-actions button { background: none; border: 0; color: #fff; font-size: 14px; padding: 12px 0; cursor: pointer; }
+#unlock-error { position: absolute; top: 237px; left: 16px; right: 16px; color: #ffd4d4; font-size: 12px; }
+.passcode-dots.rejected { animation: passcode-shake .35s ease; }
+@keyframes passcode-shake { 25%, 75% { transform: translateX(-9px); } 50% { transform: translateX(9px); } }
+@media (prefers-reduced-motion: reduce) { .passcode-dots.rejected { animation: none; } }
+@media (max-height: 850px), (max-width: 420px) {
+    .phone-container { width: min(380px, calc(100vw - 28px), calc((100dvh - 88px) * .4935)); height: min(770px, calc(100dvh - 88px)); }
+    .ambiente { margin-top: 36px; }
+    .unlock-form { padding: 54px 22px 32px; }
+    .passcode-lock { margin-bottom: 12px; }
+    .passcode-keypad { grid-template-columns: repeat(3, clamp(48px, 9dvh, 76px)); gap: 12px 20px; margin-top: 35px; }
+    .passcode-keypad button { width: clamp(48px, 9dvh, 76px); height: clamp(48px, 9dvh, 76px); }
+    #unlock-error { top: 194px; }
+    .voltar-jogo { font-size: 12px; }
+}
+@media (hover: none) {
+    .passcode-keypad button:hover { background: #ffffff28; }
+    .passcode-keypad button:active { background: #ffffff65; }
+}
+
+#home-screen {
+    background: url('galeria/foto-07.png') center/cover;
+    transform: scale(0.9);
+}
+
+#home-screen.active {
+    transform: scale(1);
+}
+
+.wallpaper-overlay {
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.1));
+}
+
+.app-grid {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.app-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.app-icon:active {
+    transform: scale(0.9);
+}
+
+.app-icon .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.app-icon span {
+    font-size: 11px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    font-weight: 500;
+}
+
+/* Cores dos Ícones */
+.bg-green { background: linear-gradient(45deg, #25D366, #128C7E); }
+.bg-blue { background: linear-gradient(45deg, #007AFF, #0055FF); }
+.bg-purple { background: linear-gradient(45deg, #5E5CE6, #4441D3); }
+.bg-yellow { background: linear-gradient(45deg, #FFCC00, #E5B700); }
+.bg-memory { background: linear-gradient(135deg, #fb7185, #a855f7); }
+.memory-app-icon { border: 0; background: none; color: inherit; padding: 0; }
+.memory-app-icon:focus-visible { outline: 2px solid #fff; outline-offset: 5px; border-radius: 12px; }
+#memory { background: radial-gradient(ellipse at top, #302047, #11101b 70%); }
+.memory-content { height: 100%; padding: 115px 20px 45px; }
+.memory-eyebrow { color: #c4a2ef; font-size: 10px; letter-spacing: 2px; margin-bottom: 10px; }
+.memory-content h3 { font-size: 25px; margin-bottom: 8px; }
+.memory-intro { color: #b4afc4; font-size: 13px; line-height: 1.6; }
+.memory-stats { display: flex; gap: 8px; margin: 24px 0 20px; }
+.memory-stats > div { flex: 1; background: #ffffff08; border: 1px solid #ffffff10; border-radius: 12px; padding: 12px 8px; text-align: center; }
+.memory-stats span { display: block; font-size: 10px; color: #b4afc4; margin-bottom: 6px; }
+.memory-stats strong { font-size: 20px; }
+.memory-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.memory-card { aspect-ratio: 1.2; border: 1px solid #a78bfa55; border-radius: 14px; background: linear-gradient(135deg, #473265, #2c2445); color: #c4a2ef; font-size: 27px; font-weight: 600; cursor: pointer; touch-action: manipulation; transition: background .15s, transform .15s; }
+.memory-card:active { transform: scale(.95); }
+.memory-card.revealed { background: #f3eafa; color: #222; }
+.memory-card.matched { background: #244c42; border-color: #6ee7b766; cursor: default; }
+.memory-card:focus-visible, .memory-restart:focus-visible { outline: 3px solid #e9d5ff; outline-offset: 3px; }
+.memory-status { min-height: 52px; margin: 18px 0 8px; text-align: center; color: #d7c9ec; font-size: 13px; line-height: 1.6; }
+.memory-restart { width: 100%; padding: 13px; border: 0; border-radius: 12px; background: #b99aef; color: #211331; font-weight: 600; cursor: pointer; touch-action: manipulation; }
+.bg-game { background: linear-gradient(135deg, #ff8066, #a43de0); }
+.game-app-icon { border: 0; background: transparent; color: inherit; }
+.memory-content { padding: 110px 20px 45px; background: radial-gradient(ellipse at top, #23203b, #0c0c14); }
+.memory-intro { text-align: center; color: #c3bfd8; font-size: 13px; line-height: 1.7; margin-bottom: 22px; }
+.memory-stats { display: flex; justify-content: space-between; color: #b4adc9; font-size: 13px; margin-bottom: 16px; }
+.memory-stats strong { color: #fff; margin-left: 5px; }
+.memory-board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.memory-card {
+    aspect-ratio: 1.15;
+    border: 1px solid #62528a;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #423163, #29213e);
+    color: #c2a7f4;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    touch-action: manipulation;
+}
+.memory-card:active { transform: scale(0.94); }
+.memory-card.revealed { background: #eee8fa; border-color: #eee8fa; }
+.memory-card.matched { background: #193f36; border-color: #4cba91; cursor: default; }
+.memory-status { min-height: 48px; margin: 18px 0 8px; text-align: center; font-size: 13px; line-height: 1.6; color: #d6cbea; }
+.memory-restart { width: 100%; padding: 13px; border: 0; border-radius: 12px; background: #9561df; color: #fff; font-size: 14px; font-weight: 600; cursor: pointer; }
+.memory-card:focus-visible, .memory-restart:focus-visible, .game-app-icon:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+/* Layout dos Aplicativos */
+.app-view {
+    background-color: #000;
+}
+
+.blur-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    padding-top: 45px;
+    padding-left: 20px;
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.blur-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 40px 16px 0;
+}
+
+.app-back {
+    background: transparent;
+    border: 0;
+    color: #007aff;
+    font-size: 38px;
+    width: 36px;
+    height: 44px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.app-back:focus-visible {
+    outline: 2px solid #007aff;
+}
+
+.app-content {
+    padding-top: 100px;
+    height: 100%;
+}
+
+.scrollable {
+    overflow-y: auto;
+}
+.scrollable::-webkit-scrollbar { width: 0px; } /* Oculta scrollbar */
+
+/* Design de Mensagens */
+.chat-list, .email-list, .note-list {
+    padding: 0 15px;
+}
+
+.chat-item, .email-item, .note-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+}
+
+.chat-item:active, .email-item:active, .note-item:active {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.chat-item.unread .chat-title strong, .email-item.unread strong {
+    color: #007AFF;
+}
+
+.chat-item.unread p, .email-item.unread p {
+    color: #fff;
+    font-weight: 600;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+.bg-gray { background-color: #555; }
+.bg-pink { background-color: #FF2D55; }
+
+.chat-preview {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.chat-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.chat-time {
+    font-size: 12px;
+    color: #666;
+}
+
+.chat-preview p, .email-item p, .note-item p {
+    font-size: 14px;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Design Email */
+button.chat-item, button.email-item {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #222;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+}
+button.chat-item:focus-visible, button.email-item:focus-visible { outline: 2px solid #007aff; }
+.conversation {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    background: #0b0b0d;
+}
+.conversation[hidden] { display: none; }
+.conversation-header { display: flex; align-items: center; gap: 12px; padding: 40px 16px 0; }
+#conversation-back, #email-back {
+    background: transparent;
+    border: 0;
+    color: #007aff;
+    font-size: 38px;
+    width: 36px;
+    height: 44px;
+    cursor: pointer;
+}
+.conversation-header h2 { font-size: 18px; }
+.conversation-history {
+    position: absolute;
+    top: 90px;
+    bottom: 70px;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.message-date { text-align: center; font-size: 11px; color: #888; margin: 8px 0; }
+.message-bubble {
+    max-width: 82%;
+    padding: 10px 13px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    flex-shrink: 0;
+}
+.message-bubble.received { align-self: flex-start; background: #26262b; border-bottom-left-radius: 5px; }
+.message-bubble.sent { align-self: flex-end; background: #006ee6; border-bottom-right-radius: 5px; }
+.message-time { display: block; text-align: right; font-size: 10px; opacity: 0.65; margin-top: 4px; }
+.conversation-footer {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    padding: 12px;
+    border-top: 1px solid #222;
+    color: #777;
+    font-size: 11px;
+    text-align: center;
+}
+
+.email-item {
+    flex-direction: column;
+    gap: 4px;
+}
+
+.email-sender {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* Design Galeria */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    padding: 2px;
+}
+
+.photo {
+    aspect-ratio: 1;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #444;
+}
+
+.photo { overflow: hidden; }
+.photo { border: 0; padding: 0; cursor: zoom-in; }
+.photo:focus-visible { outline: 2px solid #007aff; outline-offset: -2px; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+#gallery-empty { padding: 24px; text-align: center; color: #999; }
+
+.gallery-viewer {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    border: 0;
+    padding: 64px 20px 20px;
+    background: rgba(0, 0, 0, 0.95);
+    color: #fff;
+}
+
+.gallery-viewer[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.gallery-viewer::backdrop { background: #000; }
+.gallery-viewer img { width: 100%; min-height: 0; flex: 1; object-fit: contain; }
+#gallery-caption { flex-shrink: 0; text-align: center; font-size: 14px; color: #ccc; }
+.gallery-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: #222;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
+.gallery-close:focus-visible { outline: 2px solid #007aff; }
+
+/* Barra de Início (Home Indicator) */
+.home-indicator {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.home-indicator .bar {
+    width: 100px;
+    height: 4px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 2px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.home-indicator:active .bar {
+    background-color: #fff;
+    transform: scaleX(0.9);
+}
+
+/* Leitura de email dentro do celular. */
+.email-detail {
+    position: absolute;
+    top: 90px;
+    bottom: 30px;
+    width: 100%;
+    padding: 24px 20px;
+    overflow-wrap: anywhere;
+}
+.email-detail h3 { font-size: 21px; line-height: 1.4; margin-bottom: 12px; }
+.email-detail .email-sender { padding-bottom: 18px; border-bottom: 1px solid #222; }
+#email-body { margin-top: 22px; font-size: 15px; line-height: 1.8; white-space: pre-wrap; user-select: text; }
+#email-back:focus-visible { outline: 2px solid #007aff; }
+
+/* Lista e leitura completa das notas. */
+button.note-item {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #222;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    flex-direction: column;
+    gap: 4px;
+}
+button.note-item:focus-visible, #note-back:focus-visible { outline: 2px solid #007aff; }
+#note-back {
+    background: transparent;
+    border: 0;
+    color: #007aff;
+    font-size: 38px;
+    width: 36px;
+    height: 44px;
+    cursor: pointer;
+}
+#note-body { margin-top: 22px; font-size: 15px; line-height: 1.8; white-space: pre-wrap; user-select: text; }

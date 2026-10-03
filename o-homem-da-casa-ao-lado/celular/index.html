@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-caso="homemdacasaaolado" data-secao="celular">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidência: Celular</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome para os ícones dos aplicativos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Link para voltar ao caso principal -->
+    <a href="../interrogatorio/" class="voltar-jogo"><i class="fas fa-arrow-left"></i> Voltar à Mesa de Investigação</a>
+
+    <div class="ambiente">
+        <div class="phone-container">
+            <!-- Detalhes físicos do celular -->
+            <div class="phone-notch"></div>
+            <div class="phone-button-left"></div>
+            <div class="phone-button-right"></div>
+            
+            <div class="phone-screen">
+                <!-- Barra de Status (Topo) -->
+                <div class="status-bar">
+                    <span class="time" id="clock">14:03</span>
+                    <div class="status-icons">
+                        <i class="fas fa-signal"></i>
+                        <i class="fas fa-wifi"></i>
+                        <i class="fas fa-battery-half"></i>
+                    </div>
+                </div>
+
+                <!-- Tela Inicial -->
+                <div id="lock-screen" class="screen active" aria-labelledby="lock-title">
+                    <form id="unlock-form" class="unlock-form">
+                        <svg class="passcode-lock" viewBox="0 0 32 40" fill="none" aria-hidden="true">
+                            <path d="M8 17V11a8 8 0 0 1 16 0v6" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                            <rect x="3" y="16" width="26" height="22" rx="5" fill="currentColor"/>
+                        </svg>
+                        <h2 id="lock-title">Digite o Código</h2>
+                        <label for="phone-password" class="visually-hidden">Código de quatro dígitos</label>
+                        <input id="phone-password" class="visually-hidden" type="password" inputmode="none" pattern="[0-9]{4}" maxlength="4" autocomplete="off" aria-describedby="unlock-error" required>
+                        <div class="passcode-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+                        <div class="passcode-keypad" aria-label="Teclado numérico">
+                            <button type="button" data-digit="1" aria-label="1"><span>1</span><small>&nbsp;</small></button>
+                            <button type="button" data-digit="2" aria-label="2"><span>2</span><small>ABC</small></button>
+                            <button type="button" data-digit="3" aria-label="3"><span>3</span><small>DEF</small></button>
+                            <button type="button" data-digit="4" aria-label="4"><span>4</span><small>GHI</small></button>
+                            <button type="button" data-digit="5" aria-label="5"><span>5</span><small>JKL</small></button>
+                            <button type="button" data-digit="6" aria-label="6"><span>6</span><small>MNO</small></button>
+                            <button type="button" data-digit="7" aria-label="7"><span>7</span><small>PQRS</small></button>
+                            <button type="button" data-digit="8" aria-label="8"><span>8</span><small>TUV</small></button>
+                            <button type="button" data-digit="9" aria-label="9"><span>9</span><small>WXYZ</small></button>
+                            <button type="button" data-digit="0" aria-label="0"><span>0</span></button>
+                        </div>
+                        <div class="passcode-actions"><button type="button" id="unlock-cancel">Cancelar</button><button type="button" id="unlock-delete">Apagar</button></div>
+                        <p id="unlock-error" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div id="home-screen" class="screen" inert>
+                    <div class="wallpaper-overlay"></div>
+                    <div class="app-grid">
+                        <div class="app-icon" data-app="messages">
+                            <div class="icon bg-green"><i class="fas fa-comment"></i></div>
+                            <span>Mensagens</span>
+                        </div>
+                        <div class="app-icon" data-app="gallery">
+                            <div class="icon bg-blue"><i class="fas fa-image"></i></div>
+                            <span>Galeria</span>
+                        </div>
+                        <div class="app-icon" data-app="email">
+                            <div class="icon bg-purple"><i class="fas fa-envelope"></i></div>
+                            <span>Email</span>
+                        </div>
+                        <div class="app-icon" data-app="notes">
+                            <div class="icon bg-yellow"><i class="fas fa-sticky-note"></i></div>
+                            <span>Notas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aplicativo: Mensagens -->
+                <div id="messages" class="screen app-view">
+                    <div class="app-header blur-header">
+                        <button type="button" class="app-back" aria-label="Voltar para a tela inicial">&#8249;</button>
+                        <h2>Mensagens</h2>
+                    </div>
+                    <div class="app-content scrollable">
+                        <div class="chat-list">
+                            <button type="button" class="chat-item unread" data-conversa="desconhecido">
+                                <div class="avatar bg-gray">D</div>
+                                <div class="chat-preview">
+                                    <div class="chat-title">
+                                        <strong>Desconhecido</strong>
+                                        <span class="chat-time">Ontem</span>
+                                    </div>
+                                    <p>Eu sei o que você fez no quarto 307.</p>
+                                </div>
+                            </button>
+                            <button type="button" class="chat-item" data-conversa="mae">
+                                <div class="avatar bg-pink">M</div>
+                                <div class="chat-preview">
+                                    <div class="chat-title">
+                                        <strong>Mãe</strong>
+                                        <span class="chat-time">Segunda</span>
+                                    </div>
+                                    <p>Me liga quando puder, estou preocupada.</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <section id="conversation" class="conversation" aria-labelledby="conversation-name" hidden>
+                        <div class="blur-header conversation-header">
+                            <button type="button" id="conversation-back" aria-label="Voltar às mensagens">&#8249;</button>
+                            <h2 id="conversation-name"></h2>
+                        </div>
+                        <div id="conversation-history" class="conversation-history scrollable" tabindex="0" aria-label="Histórico de mensagens"></div>
+                        <div class="conversation-footer">Histórico de mensagens do celular</div>
+                    </section>
+                </div>
+
+                <!-- Aplicativo: Galeria -->
+                <div id="gallery" class="screen app-view">
+                    <div class="app-header blur-header">
+                        <button type="button" class="app-back" aria-label="Voltar para a tela inicial">&#8249;</button>
+                        <h2>Galeria</h2>
+                    </div>
+                    <div class="app-content scrollable">
+                        <div class="photo-grid" id="gallery-photos" aria-label="Fotos do celular"></div>
+                        <p id="gallery-empty">Nenhuma foto na galeria.</p>
+                    </div>
+                </div>
+                
+                <!-- Aplicativo: Email -->
+                <div id="email" class="screen app-view">
+                    <div class="app-header blur-header">
+                        <button type="button" class="app-back" aria-label="Voltar para a tela inicial">&#8249;</button>
+                        <h2>Caixa de Entrada</h2>
+                    </div>
+
+                    <div class="app-content scrollable">
+                        <div class="email-list">
+
+                            <button type="button" class="email-item unread">
+                                <strong>pare de olhar</strong>
+                                <span class="email-sender">desconhecido</span>
+                                <p>Você está olhando para a casa errada.</p>
+                            </button>
+
+                            <button type="button" class="email-item unread">
+                                <strong>Movimento detectado</strong>
+                                <span class="email-sender">Sistema de Segurança Residencial</span>
+                                <p>Atividade registrada pela câmera externa às 02:17.</p>
+                            </button>
+
+                            <button type="button" class="email-item">
+                                <strong>RE: Planta do imóvel 118</strong>
+                                <span class="email-sender">Sandra Moura</span>
+                                <p>Encontrei uma planta antiga. Existe uma entrada de serviço nos fundos...</p>
+                            </button>
+
+                            <button type="button" class="email-item">
+                                <strong>Seu pedido foi enviado</strong>
+                                <span class="email-sender">Loja VisionTech</span>
+                                <p>Pedido: Mini câmera Wi-Fi. Seu produto já está a caminho.</p>
+                            </button>
+
+                            <button type="button" class="email-item unread">
+                                <strong>Protocolo de atendimento #84192</strong>
+                                <span class="email-sender">Companhia de Energia São Vale</span>
+                                <p>Não consta fornecimento ativo de energia para o imóvel nº 118.</p>
+                            </button>
+
+                            <button type="button" class="email-item">
+                                <strong>Sobre a casa 118</strong>
+                                <span class="email-sender">Sandra Moura</span>
+                                <p>Laura, conforme conversamos, o imóvel está desocupado há bastante tempo...</p>
+                            </button>
+
+                            <button type="button" class="email-item">
+                                <strong>Você estava lá ontem?</strong>
+                                <span class="email-sender">Daniel Rocha</span>
+                                <p>Passei na rua e achei que tinha visto você perto daquela casa.</p>
+                            </button>
+
+                            <button type="button" class="email-item">
+                                <strong>RE: Rua das Acácias</strong>
+                                <span class="email-sender">Ricardo Vasconcelos</span>
+                                <p>Eu trabalho de madrugada e já te disse: não vi ninguém entrando naquela casa.</p>
+                            </button>
+
+                            <button type="button" class="email-item">
+                                <strong>você precisa parar com isso</strong>
+                                <span class="email-sender">Bianca Alves</span>
+                                <p>Eu acredito em você, mas ficar olhando aquela janela toda madrugada...</p>
+                            </button>
+
+                            <button type="button" class="email-item">
+                                <strong>Só queria conversar</strong>
+                                <span class="email-sender">Daniel Rocha</span>
+                                <p>Eu sei que você não quer falar comigo. Não vou insistir, mas...</p>
+                            </button>
+
+                            <button type="button" class="email-item">
+                                <strong>fotos de ontem kkkkk</strong>
+                                <span class="email-sender">Bianca Alves</span>
+                                <p>Laura, tô te mandando as fotos porque no WhatsApp vai perder qualidade...</p>
+                            </button>
+
+                            <button type="button" class="email-item">
+                                <strong>Aviso acadêmico — alteração de sala</strong>
+                                <span class="email-sender">Faculdade São Vale</span>
+                                <p>Informamos aos alunos que a aula desta quinta-feira terá alteração de sala.</p>
+                            </button>
+
+                            <button type="button" class="email-item">
+                                <strong>Orçamento elétrico</strong>
+                                <span class="email-sender">Marcelo Azevedo</span>
+                                <p>Sobre o problema que você comentou na iluminação externa...</p>
+                            </button>
+
+                        </div>
+                    </div>
+                    <section id="email-message" class="conversation" aria-labelledby="email-subject" hidden>
+                        <div class="blur-header conversation-header">
+                            <button type="button" id="email-back" aria-label="Voltar à caixa de entrada">&#8249;</button>
+                            <h2>Email</h2>
+                        </div>
+                        <article class="email-detail scrollable" tabindex="0" aria-label="Conteúdo do email">
+                            <h3 id="email-subject"></h3>
+                            <p id="email-from" class="email-sender"></p>
+                            <div id="email-body"></div>
+                        </article>
+                    </section>
+                </div>
+
+                <!-- Aplicativo: Notas -->
+                <div id="notes" class="screen app-view">
+                    <div class="app-header blur-header">
+                        <button type="button" class="app-back" aria-label="Voltar para a tela inicial">&#8249;</button>
+                        <h2>Notas</h2>
+                    </div>
+
+                    <div class="app-content scrollable">
+                        <div class="note-list">
+                            
+                            <button type="button" class="note-item">
+                                <strong>Lembretes</strong>
+                                <p>Meu Aniversário é no dia 18.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Estudar para Prova</strong>
+                                <p>Dia da prova: 19/10</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Mercado</strong>
+                                <p>Leite, pão, café, morango, shampoo e pasta de dente.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Coisas pra fazer amanhã</strong>
+                                <p>Imprimir trabalho, responder a Bianca, arrumar o quarto e lavar o tênis.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Filmes pra assistir</strong>
+                                <p>Corra!, Garota Exemplar, Ilha do Medo e O Abutre.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Trabalho da faculdade</strong>
+                                <p>Terminar introdução + fazer os slides. NÃO deixar pra domingo de novo.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Ideias de presente</strong>
+                                <p>Perfume, livro ou aquela bolsa preta que a Bia gostou.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Senha Wi-Fi</strong>
+                                <p>CasaLaura_2407</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Quero comprar</strong>
+                                <p>Fone novo, luminária pro quarto, capinha transparente e uma calça jeans.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Academia</strong>
+                                <p>Segunda: perna<br>Quarta: superior<br>Sexta: perna + cardio</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Não esquecer!!!</strong>
+                                <p>Cancelar o teste grátis antes de começar a cobrar 😭</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Lugares que quero conhecer</strong>
+                                <p>Campos do Jordão, Paraty, Buenos Aires e algum lugar com neve.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Receita brownie</strong>
+                                <p>2 ovos, açúcar, manteiga, chocolate, farinha. Perguntar pra mãe as quantidades kkkkk</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Frase que gostei</strong>
+                                <p>Nem tudo precisa fazer sentido imediatamente.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Nomes bonitos</strong>
+                                <p>Olívia, Helena, Aurora, Theo e Noah.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Playlist nova</strong>
+                                <p>Fazer uma playlist só com músicas pra ouvir de madrugada.</p>
+                            </button>
+
+                            <button type="button" class="note-item">
+                                <strong>Gastos do mês</strong>
+                                <p>Faculdade, academia, celular, streaming e cartão.</p>
+                            </button>
+
+                        </div>
+                    </div>
+                    <section id="note-reader" class="conversation" aria-labelledby="note-title" hidden>
+                        <div class="blur-header conversation-header">
+                            <button type="button" id="note-back" aria-label="Voltar para as notas">&#8249;</button>
+                            <h2>Notas</h2>
+                        </div>
+                        <article class="email-detail scrollable" tabindex="0" aria-label="Texto completo da nota">
+                            <h3 id="note-title"></h3>
+                            <div id="note-body"></div>
+                        </article>
+                    </section>
+                </div>
+
+                <!-- Barra de Home (Inferior) - Clicável para voltar -->
+                <div class="home-indicator" id="home-button">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="gallery-viewer" class="gallery-viewer" aria-label="Imagem ampliada">
+        <button type="button" id="gallery-close" class="gallery-close" aria-label="Fechar imagem">&times;</button>
+        <img id="gallery-full-image" alt="">
+        <p id="gallery-caption"></p>
+    </dialog>
+
+    <script src="galeria/imagens.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -247,7 +247,7 @@ Promise.all(people.map(([id, photo]) =>
   showTestimony(data[0]);
 }).catch(() => {
   name.textContent = 'Arquivo indisponível';
-  testimony.textContent = 'Não foi possível carregar os depoimentos. Tente recarregar a página.';
+  testimony.textContent = 'Não foi possível carregar os esclarecimentos. Tente recarregar a página.';
 });
 
 replay.addEventListener('click', () => {

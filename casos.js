@@ -23,7 +23,7 @@ window.CASOS = {
     paginas: {
       celular: 'o-homem-da-casa-ao-lado/celular/index.html',
       interrogatorio: 'o-homem-da-casa-ao-lado/interrogatorio/index.html',
-      depoimentos: 'o-homem-da-casa-ao-lado/depoimentos/index.html',
+      esclarecimentos: 'o-homem-da-casa-ao-lado/esclarecimentos/index.html',
       casoresolvido: 'o-homem-da-casa-ao-lado/casoresolvido/index.html',
       revelacao: 'o-homem-da-casa-ao-lado/casoresolvido/revelacao/index.html'
     }

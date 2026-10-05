@@ -38,24 +38,77 @@ galleryImages.forEach(({ arquivo, descricao }, index) => {
 
 // Edite os textos abaixo para personalizar o histórico de cada conversa.
 const conversas = {
-    "mae": {
-        "nome": "Mãe",
+    "octavio": {
+        "nome": "Octávio Roupas",
         "mensagens": [
-            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "Filha vai almoçar em casa?" },
-            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "acho que sim" },
-            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "Se vier compra leite" },
-            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "ta bom" },
-            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "E não esquece que sua tia perguntou do domingo" },
-            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "eu sei mãe kkkkk" },
-            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "22 anos só uma vez" },
-            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "nem fiz 22 ainda 😭" },
-            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "faltam poucos dias" },
-            { "dia": "14/10", "hora": "20:31", "tipo": "recebida", "texto": "Vou dormir cedo hoje" },
-            { "dia": "14/10", "hora": "20:31", "tipo": "enviada", "texto": "ta" },
-            { "dia": "14/10", "hora": "20:31", "tipo": "recebida", "texto": "Não fica até tarde estudando" },
-            { "dia": "14/10", "hora": "20:31", "tipo": "enviada", "texto": "não vou" },
-            { "dia": "14/10", "hora": "20:31", "tipo": "recebida", "texto": "boa noite filha ❤️" },
-            { "dia": "14/10", "hora": "20:31", "tipo": "enviada", "texto": "boa noite ❤️" }
+            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "Oi seu Octávio, boa tarde" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Oi Laura! Boa tarde 😊" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "Meu aniversário tá chegando e queria ver uns vestidos" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "tem algum mais arrumadinho? mas não muito chique kkk" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Tenho sim. Chegaram alguns essa semana" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Vou te mandar umas opções.", "fotosSequenciais": "otavio" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "gostei mais desse vermelho com brilho 😭❤️" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "acho que vou ficar com ele mesmo" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "consegue reservar pra mim até dia 18? Quero usar no meu aniversário" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Consigo sim 😊" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Vou deixar separado no seu tamanho até o dia 18." },
+            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "perfeitooo, obrigada seu Octávio ❤️" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Por nada, Laura 😊" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Está reservado." }
+        ]
+    },
+    "daniel": {
+        "nome": "Daniel",
+        "mensagens": [
+            { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "oi" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "aconteceu alguma coisa?" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "preciso te pedir uma coisa" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "fala" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "vc ainda tem aquela lanterna grande no carro?" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "tenho pq" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "preciso entrar num lugar" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "que lugar?" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "naquela casa na minha frente" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "nem fudendo Laura" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "é sério" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "justamente por isso" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "vc ta ficando obcecada com essa casa" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "eu só quero entrar e ver uma coisa" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "não" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "então pelo menos vem aqui amanhã" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "pra que" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "quero te mostrar umas fotos" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "fotos de que?" },
+            { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "amanhã eu explico" },
+            { "dia": "14/10", "hora": "17:21", "tipo": "recebida", "texto": "cheguei" },
+            { "dia": "14/10", "hora": "17:21", "tipo": "enviada", "texto": "to descendo" }
+        ]
+    },
+    "julia": {
+        "nome": "Júlia",
+        "mensagens": [
+            { "dia": "14/10", "hora": "09:26", "tipo": "recebida", "texto": "vc fez a parte da maquete?" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "quase" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "recebida", "texto": "“quase” = não fez" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "cala boca kkkkk" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "recebida", "texto": "vai amanhã?" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "vou" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "recebida", "texto": "vc ta estranha esses dias" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "dormindo mal" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "recebida", "texto": "por causa daquela casa ainda?" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "um pouco" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "recebida", "texto": "esquece isso menina" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "queria" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "mas ontem aconteceu uma coisa" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "recebida", "texto": "oq?" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "eu fiquei olhando a janela por quase uma hora" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "recebida", "texto": "psicopata kkkkk" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "não é isso" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "a figura não se mexeu nenhuma vez" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "recebida", "texto": "e?" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "uma pessoa se mexeria." },
+            { "dia": "14/10", "hora": "09:26", "tipo": "recebida", "texto": "para 😭" },
+            { "dia": "14/10", "hora": "09:26", "tipo": "enviada", "texto": "to falando sério" }
         ]
     },
     "bianca": {
@@ -107,7 +160,7 @@ const conversas = {
                 "dia": "11/10",
                 "hora": "22:17",
                 "tipo": "enviada",
-                "texto": "mas hoje tinha algu?m na janela"
+                "texto": "mas hoje tinha alguém na janela"
             },
             {
                 "dia": "11/10",
@@ -149,13 +202,13 @@ const conversas = {
                 "dia": "12/10",
                 "hora": "00:03",
                 "tipo": "enviada",
-                "texto": "ela falava de uma casa vazia tamb?m"
+                "texto": "ela falava de uma casa vazia também"
             },
             {
                 "dia": "12/10",
                 "hora": "00:03",
                 "tipo": "recebida",
-                "texto": "isso n?o quer dizer que seja a mesma coisa"
+                "texto": "isso não quer dizer que seja a mesma coisa"
             },
             {
                 "dia": "12/10",
@@ -167,7 +220,7 @@ const conversas = {
                 "dia": "12/10",
                 "hora": "00:03",
                 "tipo": "enviada",
-                "texto": "mas ? estranho demais"
+                "texto": "mas é estranho demais"
             },
             {
                 "dia": "13/10",
@@ -191,7 +244,7 @@ const conversas = {
                 "dia": "13/10",
                 "hora": "23:48",
                 "tipo": "enviada",
-                "texto": "s? que tem uma coisa estranha"
+                "texto": "só que tem uma coisa estranha"
             },
             {
                 "dia": "13/10",
@@ -209,7 +262,7 @@ const conversas = {
                 "dia": "13/10",
                 "hora": "23:48",
                 "tipo": "enviada",
-                "texto": "ela t? sempre no MESMO lugar"
+                "texto": "ela tá sempre no MESMO lugar"
             },
             {
                 "dia": "13/10",
@@ -221,13 +274,13 @@ const conversas = {
                 "dia": "13/10",
                 "hora": "23:48",
                 "tipo": "enviada",
-                "texto": "mesma posi??o"
+                "texto": "mesma posição"
             },
             {
                 "dia": "13/10",
                 "hora": "23:48",
                 "tipo": "enviada",
-                "texto": "at? a cabe?a parece igual"
+                "texto": "até a cabeça parece igual"
             },
             {
                 "dia": "13/10",
@@ -239,7 +292,7 @@ const conversas = {
                 "dia": "13/10",
                 "hora": "23:48",
                 "tipo": "enviada",
-                "texto": "amanh? te mostro"
+                "texto": "amanhã te mostro"
             },
             {
                 "dia": "14/10",
@@ -275,7 +328,7 @@ const conversas = {
                 "dia": "14/10",
                 "hora": "23:37",
                 "tipo": "enviada",
-                "texto": "se eu estiver certa tem algo a mais por tr?s da mulher na janela"
+                "texto": "se eu estiver certa tem algo a mais por trás da mulher na janela"
             },
             {
                 "dia": "14/10",
@@ -359,6 +412,34 @@ Object.entries(conversas).forEach(([id, conversa]) => {
     chatList.append(button);
 });
 
+// Carrega foto1.png, foto2.png etc. até encontrar o primeiro arquivo ausente.
+async function carregarFotosDaMensagem(container, mensagem, nome) {
+    for (let numero = 1; container.isConnected; numero++) {
+        const image = new Image();
+        image.alt = `Foto ${numero} enviada por ${nome}`;
+        const carregou = await new Promise(resolve => {
+            image.onload = () => resolve(true);
+            image.onerror = () => resolve(false);
+            image.src = `${mensagem.fotosSequenciais}/foto${numero}.png`;
+        });
+        if (!carregou || !container.isConnected) break;
+
+        const bubble = document.createElement('div');
+        bubble.className = 'message-bubble received message-photo';
+        const photo = document.createElement('button');
+        photo.type = 'button';
+        photo.className = 'message-photo-button';
+        photo.setAttribute('aria-label', `Abrir imagem: ${image.alt}`);
+        photo.addEventListener('click', () => abrirImagemGaleria(image));
+        photo.append(image);
+        const time = document.createElement('span');
+        time.className = 'message-time';
+        time.textContent = mensagem.hora;
+        bubble.append(photo, time);
+        container.append(bubble);
+    }
+}
+
 function abrirConversa(button) {
     const conversa = conversas[button.dataset.conversa];
     if (!conversa) return;
@@ -384,6 +465,12 @@ function abrirConversa(button) {
         bubble.setAttribute('aria-label', `${mensagem.tipo === 'enviada' ? 'Você' : conversa.nome}, ${mensagem.hora}`);
         bubble.append(text, time);
         conversationHistory.append(bubble);
+        if (mensagem.fotosSequenciais) {
+            const photos = document.createElement('div');
+            photos.className = 'message-photos';
+            conversationHistory.append(photos);
+            carregarFotosDaMensagem(photos, mensagem, conversa.nome);
+        }
     });
     button.classList.remove('unread');
     messagesList.hidden = true;

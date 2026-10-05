@@ -509,6 +509,12 @@ button.chat-item:focus-visible, button.email-item:focus-visible { outline: 2px s
 .message-bubble.received { align-self: flex-start; background: #26262b; border-bottom-left-radius: 5px; }
 .message-bubble.sent { align-self: flex-end; background: #005c4b; border-bottom-right-radius: 5px; }
 .message-time { display: block; text-align: right; font-size: 10px; opacity: 0.65; margin-top: 4px; }
+.message-photos { display: flex; flex-direction: column; gap: 8px; flex-shrink: 0; }
+.message-photo { width: 240px; padding: 5px; }
+.message-photo-button { display: block; width: 100%; padding: 0; border: 0; border-radius: 13px; overflow: hidden; background: transparent; cursor: zoom-in; }
+.message-photo-button img { display: block; width: 100%; height: auto; }
+.message-photo-button:focus-visible { outline: 2px solid #007aff; outline-offset: -2px; }
+.message-photo .message-time { padding: 0 6px 3px; }
 .conversation-footer {
     position: absolute;
     bottom: 30px;

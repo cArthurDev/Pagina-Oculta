@@ -12,6 +12,7 @@ body {
     background-image: radial-gradient(circle at 50% 50%, #1a1d24 0%, #050608 100%);
     color: #fff;
     height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,7 +220,7 @@ body {
 @keyframes passcode-shake { 25%, 75% { transform: translateX(-9px); } 50% { transform: translateX(9px); } }
 @media (prefers-reduced-motion: reduce) { .passcode-dots.rejected { animation: none; } }
 @media (max-height: 850px), (max-width: 420px) {
-    .phone-container { width: min(380px, calc(100vw - 28px), calc((100dvh - 88px) * .4935)); height: min(770px, calc(100dvh - 88px)); }
+    .phone-container { width: min(380px, calc(100vw - 28px)); height: min(770px, calc(100dvh - 88px)); }
     .ambiente { margin-top: 36px; }
     .unlock-form { padding: 54px 22px 32px; }
     .passcode-lock { margin-bottom: 12px; }
@@ -674,3 +675,82 @@ button.note-item:focus-visible, #note-back:focus-visible { outline: 2px solid #0
 .calculator-key.zero { grid-column: span 2; aspect-ratio: auto; border-radius: 40px; text-align: left; padding-left: 25px; }
 .calculator-key:active { filter: brightness(1.4); }
 .calculator-key:focus-visible, .calculator-app-icon:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
+/* Espaços consistentes para cabeçalhos, conteúdo e navegação. */
+.phone-screen { --header-height: 90px; --home-height: 44px; }
+button, a, .app-icon { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.blur-header { height: var(--header-height); padding-right: 16px; }
+.blur-header h2 { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.app-back, #conversation-back, #email-back, #note-back { width: 44px; flex-shrink: 0; }
+.app-content {
+    position: absolute;
+    inset: var(--header-height) 0 var(--home-height);
+    height: auto;
+    padding: 10px 0 16px;
+}
+.scrollable { min-height: 0; overflow-x: hidden; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.chat-preview, .chat-title strong { min-width: 0; }
+.chat-title { align-items: center; gap: 10px; }
+.chat-title strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chat-time { flex-shrink: 0; color: #a0a0a8; }
+.chat-item { align-items: center; min-height: 76px; }
+.email-item, .note-item { min-width: 0; padding: 16px 0; }
+.email-item strong, .note-item strong, .email-sender { overflow-wrap: anywhere; }
+.chat-preview p, .email-item p, .note-item p { color: #a0a0a8; max-width: 100%; }
+.conversation-history { top: var(--header-height); bottom: calc(var(--home-height) + 40px); padding: 16px 12px; }
+.conversation-footer { bottom: var(--home-height); height: 40px; display: grid; place-items: center; padding: 6px 12px; }
+.email-detail { top: var(--header-height); bottom: var(--home-height); }
+.message-bubble { max-width: 86%; }
+.message-photo { width: min(240px, 86%); }
+.home-indicator { height: var(--home-height); border: 0; background: #08080be6; }
+.home-indicator:focus-visible { outline: 2px solid #007aff; outline-offset: -4px; }
+.app-grid { top: 65px; bottom: var(--home-height); align-content: start; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 10px; padding: 20px 12px; overflow-y: auto; }
+.app-icon { border: 0; background: transparent; color: inherit; padding: 0; min-width: 0; min-height: 72px; }
+.app-icon span { max-width: 100%; font-size: 10px; }
+.app-icon:focus-visible { outline: 2px solid white; outline-offset: 3px; border-radius: 12px; }
+.unlock-form { overflow-y: auto; padding-bottom: 54px; }
+.passcode-keypad { flex-shrink: 0; }
+.passcode-actions { flex-shrink: 0; }
+#unlock-error { position: static; min-height: 18px; margin-top: 8px; order: 1; }
+.calculator-content { padding-bottom: calc(var(--home-height) + 12px); overflow-y: auto; }
+.calculator-keypad { flex-shrink: 0; }
+.calculator-display { font-size: 40px; }
+.gallery-viewer { padding-top: max(64px, calc(env(safe-area-inset-top) + 52px)); padding-bottom: max(20px, env(safe-area-inset-bottom)); }
+.gallery-close { top: max(12px, env(safe-area-inset-top)); }
+
+/* Em celulares, aproveita a largura disponível para manter o conteúdo legível. */
+@media (max-width: 480px) {
+    body { padding: calc(env(safe-area-inset-top) + 48px) 8px max(8px, env(safe-area-inset-bottom)); }
+    .voltar-jogo { top: calc(env(safe-area-inset-top) + 12px); left: 14px; min-height: 28px; font-size: 12px; }
+    .ambiente { width: 100%; height: 100%; min-height: 0; margin: 0; }
+    .phone-container { width: 100%; height: 100%; padding: 6px; border-radius: 30px; }
+    .phone-screen { border-radius: 24px; }
+    .phone-notch { top: 6px; width: 88px; height: 22px; }
+    .phone-button-left, .phone-button-right { display: none; }
+    .unlock-form { padding: 52px 18px 48px; }
+    .passcode-keypad { grid-template-columns: repeat(3, min(72px, 17vw, 9dvh)); gap: 12px 24px; margin-top: 26px; }
+    .passcode-keypad button { width: min(72px, 17vw, 9dvh); height: min(72px, 17vw, 9dvh); min-width: 44px; min-height: 44px; }
+    .passcode-keypad button span { font-size: 30px; line-height: 34px; }
+    .passcode-actions { padding-top: 12px; }
+    .calculator-keypad { gap: 8px; grid-auto-rows: clamp(44px, 8dvh, 72px); }
+    .calculator-key { aspect-ratio: auto; border-radius: 24px; }
+    .calculator-content { gap: 12px; }
+}
+
+/* Em telas baixas e na horizontal, os teclados continuam acessíveis com rolagem. */
+@media (max-height: 600px) {
+    .unlock-form { padding-top: 46px; }
+    .passcode-lock { display: none; }
+    .unlock-form h2 { font-size: 20px; }
+    .passcode-dots { margin-top: 16px; }
+    .passcode-keypad { margin-top: 20px; grid-template-columns: repeat(3, 44px); gap: 8px 24px; }
+    .passcode-keypad button { width: 44px; height: 44px; }
+    .passcode-keypad button span { font-size: 24px; line-height: 26px; }
+    .passcode-keypad button small { font-size: 7px; }
+    .calculator-keypad { grid-auto-rows: 44px; }
+    .calculator-key { aspect-ratio: auto; border-radius: 22px; }
+    .calculator-display { font-size: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .screen, .app-icon, .passcode-keypad button { transition: none; }
+}

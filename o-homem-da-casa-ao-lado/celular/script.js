@@ -38,6 +38,26 @@ galleryImages.forEach(({ arquivo, descricao }, index) => {
 
 // Edite os textos abaixo para personalizar o histórico de cada conversa.
 const conversas = {
+    "mae": {
+        "nome": "Mãe",
+        "mensagens": [
+            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "Filha vai almoçar em casa?" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "acho que sim" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "Se vier compra leite" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "ta bom" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "E não esquece que sua tia perguntou do domingo" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "eu sei mãe kkkkk" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "22 anos só uma vez" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "nem fiz 22 ainda 😭" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "faltam poucos dias" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "recebida", "texto": "Vou dormir cedo hoje" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "enviada", "texto": "ta" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "recebida", "texto": "Não fica até tarde estudando" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "enviada", "texto": "não vou" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "recebida", "texto": "boa noite filha ❤️" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "enviada", "texto": "boa noite ❤️" }
+        ]
+    },
     "ricardo": {
         "nome": "Ricardo",
         "mensagens": [
@@ -74,7 +94,7 @@ const conversas = {
             { "dia": "04/09", "hora": "23:11", "tipo": "enviada", "texto": "idiota kkkkk" },
             { "dia": "04/09", "hora": "23:11", "tipo": "recebida", "texto": "Boa noite, Laura." },
             { "dia": "04/09", "hora": "23:11", "tipo": "enviada", "texto": "boa noite ❤️" },
-            { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "[foto1.png]", "foto": "ricardo/foto1.png" },
+            { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "[foto]", "foto": "ricardo/foto1.png" },
             { "dia": "06/09", "hora": "22:14", "tipo": "recebida", "texto": "Assim você complica minha vida kkk" },
             { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "😂😂" },
             { "dia": "06/09", "hora": "22:14", "tipo": "recebida", "texto": "Saudade de você." },

@@ -2,7 +2,7 @@
 <html lang="pt-BR" data-caso="homemdacasaaolado" data-secao="celular">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Evidência: Celular</title>
     <script src="../../casos.js"></script>
     <script src="../../acesso/controle.js"></script>
@@ -65,30 +65,30 @@
                 <div id="home-screen" class="screen" inert>
                     <div class="wallpaper-overlay"></div>
                     <div class="app-grid">
-                        <div class="app-icon" data-app="messages">
+                        <button type="button" class="app-icon" data-app="messages">
                             <div class="icon bg-green"><i class="fas fa-comment"></i></div>
                             <span>Mensagens</span>
-                        </div>
-                        <div class="app-icon" data-app="gallery">
+                        </button>
+                        <button type="button" class="app-icon" data-app="gallery">
                             <div class="icon bg-blue"><i class="fas fa-image"></i></div>
                             <span>Galeria</span>
-                        </div>
-                        <div class="app-icon" data-app="email">
+                        </button>
+                        <button type="button" class="app-icon" data-app="email">
                             <div class="icon bg-purple"><i class="fas fa-envelope"></i></div>
                             <span>Email</span>
-                        </div>
-                        <div class="app-icon" data-app="notes">
+                        </button>
+                        <button type="button" class="app-icon" data-app="notes">
                             <div class="icon bg-yellow"><i class="fas fa-sticky-note"></i></div>
                             <span>Notas</span>
-                        </div>
+                        </button>
                         <button type="button" class="app-icon calculator-app-icon" data-app="calculator">
                             <div class="icon bg-calculator"><i class="fas fa-calculator" aria-hidden="true"></i></div>
                             <span>Calculadora</span>
                         </button>
                     </div>
-                </div>
 
                 <!-- Aplicativo: Calculadora -->
+                </div>
                 <div id="calculator" class="screen app-view">
                     <div class="app-header blur-header">
                         <button type="button" class="app-back" aria-label="Voltar para a tela inicial">&#8249;</button>
@@ -98,23 +98,23 @@
                         <output id="calculator-display" class="calculator-display" aria-label="Resultado" aria-live="polite">0</output>
                         <div class="calculator-keypad" aria-label="Teclado da calculadora">
                             <button type="button" class="calculator-key utility" data-calc="clear" aria-label="Limpar">AC</button>
-                            <button type="button" class="calculator-key utility" data-calc="sign" aria-label="Inverter sinal">?</button>
+                            <button type="button" class="calculator-key utility" data-calc="sign" aria-label="Inverter sinal">&plusmn;</button>
                             <button type="button" class="calculator-key utility" data-calc="percent" aria-label="Porcentagem">%</button>
-                            <button type="button" class="calculator-key operator" data-calc="/" aria-label="Dividir">?</button>
+                            <button type="button" class="calculator-key operator" data-calc="/" aria-label="Dividir">&divide;</button>
                             <button type="button" class="calculator-key " data-calc="7" aria-label="7">7</button>
                             <button type="button" class="calculator-key " data-calc="8" aria-label="8">8</button>
                             <button type="button" class="calculator-key " data-calc="9" aria-label="9">9</button>
-                            <button type="button" class="calculator-key operator" data-calc="*" aria-label="Multiplicar">?</button>
+                            <button type="button" class="calculator-key operator" data-calc="*" aria-label="Multiplicar">&times;</button>
                             <button type="button" class="calculator-key " data-calc="4" aria-label="4">4</button>
                             <button type="button" class="calculator-key " data-calc="5" aria-label="5">5</button>
                             <button type="button" class="calculator-key " data-calc="6" aria-label="6">6</button>
-                            <button type="button" class="calculator-key operator" data-calc="-" aria-label="Subtrair">?</button>
+                            <button type="button" class="calculator-key operator" data-calc="-" aria-label="Subtrair">&minus;</button>
                             <button type="button" class="calculator-key " data-calc="1" aria-label="1">1</button>
                             <button type="button" class="calculator-key " data-calc="2" aria-label="2">2</button>
                             <button type="button" class="calculator-key " data-calc="3" aria-label="3">3</button>
                             <button type="button" class="calculator-key operator" data-calc="+" aria-label="Somar">+</button>
                             <button type="button" class="calculator-key zero" data-calc="0" aria-label="0">0</button>
-                            <button type="button" class="calculator-key " data-calc="." aria-label="V?rgula decimal">,</button>
+                            <button type="button" class="calculator-key " data-calc="." aria-label="Vírgula decimal">,</button>
                             <button type="button" class="calculator-key operator" data-calc="=" aria-label="Igual">=</button>
                         </div>
                     </div>
@@ -364,9 +364,9 @@
                 </div>
 
                 <!-- Barra de Home (Inferior) - Clicável para voltar -->
-                <div class="home-indicator" id="home-button">
-                    <div class="bar"></div>
-                </div>
+                <button type="button" class="home-indicator" id="home-button" aria-label="Voltar para a tela inicial">
+                    <span class="bar"></span>
+                </button>
             </div>
         </div>
     </div>

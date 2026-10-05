@@ -38,10 +38,53 @@ galleryImages.forEach(({ arquivo, descricao }, index) => {
 
 // Edite os textos abaixo para personalizar o histórico de cada conversa.
 const conversas = {
-    "octavio": {
-        "nome": "Octávio Roupas",
+    "sandra": {
+        "nome": "Sandra Imóveis",
         "mensagens": [
-            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "Oi seu Octávio, boa tarde" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "Oi dona Sandra, tudo bem?" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Oi Laura. Tudo sim. Aconteceu alguma coisa?" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "queria perguntar sobre a casa 118 aqui da rua" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "é a senhora que cuida dela né?" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Sou responsável pelo imóvel, sim. Por quê?" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "ela tá vazia mesmo?" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Está. Há bastante tempo." },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "é que tenho visto luz acesa lá de noite" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "e às vezes parece ter alguém na janela" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Laura, aquela casa está fechada." },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Você tem certeza do que viu?" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "tenho" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "alguém além da senhora tem a chave?" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Por que quer saber isso?" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "pq se tá vazia alguém deve estar entrando" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Eu tenho uma chave por causa da imobiliária." },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Mas não entro naquela casa sem necessidade." },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "quando foi a última vez que a senhora entrou?" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Não lembro exatamente." },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Já faz algum tempo." },
+            { "dia": "09/10", "hora": "11:42", "tipo": "enviada", "texto": "entendi" },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Laura, não tente entrar lá." },
+            { "dia": "09/10", "hora": "11:42", "tipo": "recebida", "texto": "Se realmente estiver acontecendo alguma coisa, deixe que eu resolvo." },
+            { "dia": "12/10", "hora": "22:51", "tipo": "enviada", "texto": "dona Sandra desculpa mandar essa hora" },
+            { "dia": "12/10", "hora": "22:51", "tipo": "enviada", "texto": "a luz acendeu de novo" },
+            { "dia": "12/10", "hora": "22:51", "tipo": "recebida", "texto": "Na 118?" },
+            { "dia": "12/10", "hora": "22:51", "tipo": "enviada", "texto": "sim" },
+            { "dia": "12/10", "hora": "22:51", "tipo": "enviada", "texto": "tem alguém na janela de novo" },
+            { "dia": "12/10", "hora": "22:51", "tipo": "recebida", "texto": "Você está olhando para a casa agora?" },
+            { "dia": "12/10", "hora": "22:51", "tipo": "enviada", "texto": "tô" },
+            { "dia": "12/10", "hora": "22:51", "tipo": "recebida", "texto": "Então pare de olhar e fique dentro de casa." },
+            { "dia": "12/10", "hora": "22:51", "tipo": "enviada", "texto": "a senhora não quer vir ver?" },
+            { "dia": "12/10", "hora": "22:51", "tipo": "recebida", "texto": "Agora não." },
+            { "dia": "12/10", "hora": "22:51", "tipo": "enviada", "texto": "mas se ninguém pode estar lá…" },
+            { "dia": "12/10", "hora": "22:51", "tipo": "recebida", "texto": "Laura, já disse que vou verificar." },
+            { "dia": "12/10", "hora": "22:51", "tipo": "recebida", "texto": "Não entre naquela casa." },
+            { "dia": "12/10", "hora": "22:51", "tipo": "enviada", "texto": "tá bom" },
+            { "dia": "12/10", "hora": "22:51", "tipo": "recebida", "texto": "E, por favor, não mexa no portão nem tente descobrir sozinha quem está lá." }
+        ]
+    },
+    "octavio": {
+        "nome": "Otávio",
+        "mensagens": [
+            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "Oi seu Otávio, boa tarde" },
             { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Oi Laura! Boa tarde 😊" },
             { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "Meu aniversário tá chegando e queria ver uns vestidos" },
             { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "tem algum mais arrumadinho? mas não muito chique kkk" },
@@ -52,7 +95,7 @@ const conversas = {
             { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "consegue reservar pra mim até dia 18? Quero usar no meu aniversário" },
             { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Consigo sim 😊" },
             { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Vou deixar separado no seu tamanho até o dia 18." },
-            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "perfeitooo, obrigada seu Octávio ❤️" },
+            { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "perfeitooo, obrigada seu Otávio ❤️" },
             { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Por nada, Laura 😊" },
             { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Está reservado." }
         ]

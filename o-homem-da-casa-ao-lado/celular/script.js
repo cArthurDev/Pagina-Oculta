@@ -82,7 +82,15 @@ const conversas = {
             { "dia": "06/09", "hora": "22:14", "tipo": "recebida", "texto": "Quando vou te ver de novo?" },
             { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "essa semana a gente vê" },
             { "dia": "06/09", "hora": "22:14", "tipo": "recebida", "texto": "Vou cobrar, hein" },
-            { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "kkkkk pode cobrar" }
+            { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "kkkkk pode cobrar" },
+            { "dia": "14/09", "hora": "23:41", "tipo": "enviada", "texto": "depois do que vc fez hoje não fala mais comigo" },
+            { "dia": "14/09", "hora": "23:41", "tipo": "recebida", "texto": "Laura me desculpa" },
+            { "dia": "14/09", "hora": "23:41", "tipo": "enviada", "texto": "não quero conversar" },
+            { "dia": "14/09", "hora": "23:41", "tipo": "recebida", "texto": "por favor, eu errei" },
+            { "dia": "14/09", "hora": "23:41", "tipo": "enviada", "texto": "acabou Ricardo" },
+            { "dia": "14/09", "hora": "23:41", "tipo": "recebida", "texto": "deixa eu te explicar" },
+            { "dia": "14/09", "hora": "23:41", "tipo": "enviada", "texto": "não." },
+            { "dia": "14/09", "hora": "23:41", "tipo": "recebida", "texto": "Laura por favor…" }
         ]
     },
     "sandra": {
@@ -129,7 +137,7 @@ const conversas = {
         ]
     },
     "otavio": {
-        "nome": "Otávio",
+        "nome": "Otávio Roupas",
         "mensagens": [
             { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "Oi seu Otávio, boa tarde" },
             { "dia": "30/09", "hora": "16:18", "tipo": "recebida", "texto": "Oi Laura! Boa tarde 😊" },

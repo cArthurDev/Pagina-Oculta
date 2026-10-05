@@ -38,26 +38,111 @@ galleryImages.forEach(({ arquivo, descricao }, index) => {
 
 // Edite os textos abaixo para personalizar o histórico de cada conversa.
 const conversas = {
-    desconhecido: {
-        nome: 'Desconhecido',
+
+    mae: {
+        nome: "Mãe",
         mensagens: [
-            { dia: 'Ontem', hora: '22:41', texto: 'Você está aí?', enviada: false },
-            { dia: 'Ontem', hora: '22:43', texto: 'Quem é?', enviada: true },
-            { dia: 'Ontem', hora: '22:44', texto: 'Precisamos conversar.', enviada: false },
-            { dia: 'Ontem', hora: '22:45', texto: 'Como conseguiu meu número?', enviada: true },
-            { dia: 'Ontem', hora: '22:47', texto: 'Eu sei o que você fez no quarto 307.', enviada: false }
+            { tipo: "recebida", texto: "Vai jantar em casa hoje?", hora: "18:42" },
+            { tipo: "enviada", texto: "vou", hora: "18:44" },
+            { tipo: "enviada", texto: "mãe aquele homem apareceu de novo", hora: "23:11" },
+            { tipo: "recebida", texto: "Que homem?", hora: "23:12" },
+            { tipo: "enviada", texto: "o da casa do lado", hora: "23:12" },
+            { tipo: "recebida", texto: "Laura, seu pai já olhou aquela casa.", hora: "23:13" },
+            { tipo: "recebida", texto: "Não tinha ninguém lá.", hora: "23:13" },
+            { tipo: "enviada", texto: "eu sei o que eu vi", hora: "23:14" },
+            { tipo: "recebida", texto: "Laura, você está me assustando. Fecha a janela e tenta dormir.", hora: "23:15" }
         ]
     },
-    mae: {
-        nome: 'Mãe',
+
+    camilla: {
+        nome: "Camilla",
         mensagens: [
-            { dia: 'Domingo', hora: '18:10', texto: 'Filho, está tudo bem por aí?', enviada: false },
-            { dia: 'Domingo', hora: '18:24', texto: 'Está sim, mãe. Só estou um pouco ocupado.', enviada: true },
-            { dia: 'Domingo', hora: '18:25', texto: 'Não esquece de comer e descansar.', enviada: false },
-            { dia: 'Segunda', hora: '09:12', texto: 'Bom dia. Tentei te ligar, mas você não atendeu.', enviada: false },
-            { dia: 'Segunda', hora: '11:36', texto: 'Me liga quando puder, estou preocupada.', enviada: false }
+            { tipo: "enviada", texto: "amg", hora: "22:48" },
+            { tipo: "recebida", texto: "oii", hora: "22:48" },
+            { tipo: "enviada", texto: "ele apareceu", hora: "22:49" },
+            { tipo: "recebida", texto: "DE NOVO?", hora: "22:49" },
+            { tipo: "enviada", texto: "sim", hora: "22:49" },
+            { tipo: "enviada", texto: "mesma janela", hora: "22:50" },
+            { tipo: "recebida", texto: "Tira foto", hora: "22:50" },
+            { tipo: "enviada", texto: "já tentei", hora: "22:51" },
+            { tipo: "enviada", texto: "quando eu pego o celular ele sai", hora: "22:51" },
+            { tipo: "recebida", texto: "Isso não faz sentido", hora: "22:52" },
+            { tipo: "enviada", texto: "eu sei", hora: "22:53" },
+            { tipo: "enviada", texto: "ontem ele fez uma coisa diferente", hora: "22:53" },
+            { tipo: "recebida", texto: "oq?", hora: "22:54" },
+            { tipo: "enviada", texto: "apontou pra minha janela", hora: "22:54" },
+            { tipo: "recebida", texto: "Você tem certeza que viu ele de novo?", hora: "22:55" }
+        ]
+    },
+
+    matheus: {
+        nome: "Matheus",
+        mensagens: [
+            { tipo: "enviada", texto: "vc passou aqui ontem?", hora: "16:03" },
+            { tipo: "recebida", texto: "Não", hora: "16:08" },
+            { tipo: "enviada", texto: "certeza?", hora: "16:08" },
+            { tipo: "recebida", texto: "Laura eu tava trabalhando kkkkk", hora: "16:09" },
+            { tipo: "enviada", texto: "vi alguém perto da casa", hora: "16:10" },
+            { tipo: "recebida", texto: "Aquela casa de novo?", hora: "16:10" },
+            { tipo: "enviada", texto: "sim", hora: "16:11" },
+            { tipo: "recebida", texto: "Não tem ninguém naquela casa, Laura.", hora: "16:12" },
+            { tipo: "enviada", texto: "todo mundo fala isso", hora: "16:12" },
+            { tipo: "enviada", texto: "mas ninguém fica olhando ela de madrugada", hora: "16:13" }
+        ]
+    },
+
+    gabriela: {
+        nome: "Gabriela",
+        mensagens: [
+            { tipo: "recebida", texto: "Laura vc tá em casa?", hora: "19:31" },
+            { tipo: "enviada", texto: "sim pq", hora: "19:32" },
+            { tipo: "recebida", texto: "Nada", hora: "19:32" },
+            { tipo: "enviada", texto: "fala gabi", hora: "19:33" },
+            { tipo: "recebida", texto: "Acho que tô ficando paranoica por causa das coisas que vc falou kkkkk", hora: "19:34" },
+            { tipo: "enviada", texto: "como assim?", hora: "19:34" },
+            { tipo: "recebida", texto: "Achei que tinha alguém parado do outro lado da rua ontem", hora: "19:35" },
+            { tipo: "enviada", texto: "QUE HORAS?", hora: "19:35" },
+            { tipo: "recebida", texto: "Sei lá, quase meia noite", hora: "19:36" },
+            { tipo: "enviada", texto: "vc viu quem era?", hora: "19:36" },
+            { tipo: "recebida", texto: "Não", hora: "19:37" },
+            { tipo: "recebida", texto: "Depois eu te conto uma coisa estranha que aconteceu aqui.", hora: "19:38" }
+        ]
+    },
+
+    pai: {
+        nome: "Pai",
+        mensagens: [
+            { tipo: "enviada", texto: "pai consegue olhar aquela casa?", hora: "20:16" },
+            { tipo: "recebida", texto: "De novo isso filha?", hora: "20:20" },
+            { tipo: "enviada", texto: "por favor", hora: "20:20" },
+            { tipo: "enviada", texto: "só olha se tem alguém lá", hora: "20:21" },
+            { tipo: "recebida", texto: "Vou olhar a casa quando chegar.", hora: "20:23" }
+        ]
+    },
+
+    desconhecido: {
+        nome: "Desconhecido",
+        mensagens: [
+            { tipo: "recebida", texto: "Laura?", hora: "00:17" },
+            { tipo: "enviada", texto: "quem é?", hora: "00:19" },
+            { tipo: "recebida", texto: "Desculpa. Número errado.", hora: "00:20" },
+            { tipo: "enviada", texto: "como sabe meu nome?", hora: "00:20" }
+        ]
+    },
+
+    daniel: {
+        nome: "Daniel",
+        mensagens: [
+            { tipo: "recebida", texto: "O Matheus falou alguma coisa de mim?", hora: "14:21" },
+            { tipo: "enviada", texto: "não", hora: "14:32" },
+            { tipo: "recebida", texto: "Se falar me avisa", hora: "14:33" },
+            { tipo: "enviada", texto: "pq?", hora: "14:34" },
+            { tipo: "recebida", texto: "A gente discutiu", hora: "14:35" },
+            { tipo: "enviada", texto: "eu sei", hora: "14:35" },
+            { tipo: "recebida", texto: "Não quero mais confusão com vocês.", hora: "14:36" }
         ]
     }
+
 };
 
 const conversation = document.getElementById('conversation');
@@ -65,6 +150,37 @@ const conversationHistory = document.getElementById('conversation-history');
 const conversationBack = document.getElementById('conversation-back');
 const messagesList = document.querySelector('#messages > .app-content');
 let conversaAberta = null;
+
+// A lista acompanha os contatos e a ?ltima mensagem de cada conversa.
+const chatList = document.querySelector('#messages .chat-list');
+chatList.replaceChildren();
+Object.entries(conversas).forEach(([id, conversa]) => {
+    const ultimaMensagem = conversa.mensagens[conversa.mensagens.length - 1];
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'chat-item';
+    button.dataset.conversa = id;
+    if (id === 'desconhecido') button.classList.add('unread');
+
+    const avatar = document.createElement('div');
+    avatar.className = `avatar ${id === 'desconhecido' ? 'bg-gray' : 'bg-pink'}`;
+    avatar.textContent = conversa.nome.charAt(0);
+    const preview = document.createElement('div');
+    preview.className = 'chat-preview';
+    const title = document.createElement('div');
+    title.className = 'chat-title';
+    const name = document.createElement('strong');
+    name.textContent = conversa.nome;
+    const time = document.createElement('span');
+    time.className = 'chat-time';
+    time.textContent = ultimaMensagem?.hora || '';
+    const excerpt = document.createElement('p');
+    excerpt.textContent = ultimaMensagem?.texto || '';
+    title.append(name, time);
+    preview.append(title, excerpt);
+    button.append(avatar, preview);
+    chatList.append(button);
+});
 
 function abrirConversa(button) {
     const conversa = conversas[button.dataset.conversa];
@@ -74,7 +190,7 @@ function abrirConversa(button) {
     conversationHistory.replaceChildren();
     let diaAnterior = null;
     conversa.mensagens.forEach(mensagem => {
-        if (mensagem.dia !== diaAnterior) {
+        if (mensagem.dia && mensagem.dia !== diaAnterior) {
             const date = document.createElement('p');
             date.className = 'message-date';
             date.textContent = mensagem.dia;
@@ -82,13 +198,13 @@ function abrirConversa(button) {
             diaAnterior = mensagem.dia;
         }
         const bubble = document.createElement('div');
-        bubble.className = `message-bubble ${mensagem.enviada ? 'sent' : 'received'}`;
+        bubble.className = `message-bubble ${mensagem.tipo === 'enviada' ? 'sent' : 'received'}`;
         const text = document.createElement('p');
         text.textContent = mensagem.texto;
         const time = document.createElement('span');
         time.className = 'message-time';
         time.textContent = mensagem.hora;
-        bubble.setAttribute('aria-label', `${mensagem.enviada ? 'Você' : conversa.nome}, ${mensagem.hora}`);
+        bubble.setAttribute('aria-label', `${mensagem.tipo === 'enviada' ? 'Você' : conversa.nome}, ${mensagem.hora}`);
         bubble.append(text, time);
         conversationHistory.append(bubble);
     });

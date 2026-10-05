@@ -496,7 +496,7 @@ button.chat-item:focus-visible, button.email-item:focus-visible { outline: 2px s
     flex-direction: column;
     gap: 10px;
 }
-.message-date { text-align: center; font-size: 11px; color: #888; margin: 8px 0; }
+.message-date { align-self: center; flex-shrink: 0; text-align: center; font-size: 12px; color: #c4d0d5; background: #18272e; border-radius: 8px; padding: 6px 12px; margin: 12px 0; }
 .message-bubble {
     max-width: 82%;
     padding: 10px 13px;
@@ -507,7 +507,7 @@ button.chat-item:focus-visible, button.email-item:focus-visible { outline: 2px s
     flex-shrink: 0;
 }
 .message-bubble.received { align-self: flex-start; background: #26262b; border-bottom-left-radius: 5px; }
-.message-bubble.sent { align-self: flex-end; background: #006ee6; border-bottom-right-radius: 5px; }
+.message-bubble.sent { align-self: flex-end; background: #005c4b; border-bottom-right-radius: 5px; }
 .message-time { display: block; text-align: right; font-size: 10px; opacity: 0.65; margin-top: 4px; }
 .conversation-footer {
     position: absolute;
@@ -655,3 +655,16 @@ button.note-item:focus-visible, #note-back:focus-visible { outline: 2px solid #0
     cursor: pointer;
 }
 #note-body { margin-top: 22px; font-size: 15px; line-height: 1.8; white-space: pre-wrap; user-select: text; }
+
+/* Calculadora */
+.calculator-app-icon { border: 0; padding: 0; background: transparent; color: inherit; font: inherit; }
+.bg-calculator { background: linear-gradient(135deg, #606060, #252525); }
+.calculator-content { height: 100%; padding: 105px 18px 45px; display: flex; flex-direction: column; justify-content: flex-end; gap: 20px; }
+.calculator-display { display: block; text-align: right; font-size: clamp(28px, 7vw, 44px); font-weight: 300; color: #fff; overflow-wrap: anywhere; line-height: 1.2; }
+.calculator-keypad { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.calculator-key { border: 0; border-radius: 50%; aspect-ratio: 1; background: #333; color: #fff; font: inherit; font-size: 25px; cursor: pointer; touch-action: manipulation; }
+.calculator-key.utility { background: #aaa; color: #000; font-size: 22px; }
+.calculator-key.operator { background: #ff9500; }
+.calculator-key.zero { grid-column: span 2; aspect-ratio: auto; border-radius: 40px; text-align: left; padding-left: 25px; }
+.calculator-key:active { filter: brightness(1.4); }
+.calculator-key:focus-visible, .calculator-app-icon:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }

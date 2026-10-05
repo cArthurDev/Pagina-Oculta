@@ -38,111 +38,289 @@ galleryImages.forEach(({ arquivo, descricao }, index) => {
 
 // Edite os textos abaixo para personalizar o histórico de cada conversa.
 const conversas = {
-
-    mae: {
-        nome: "Mãe",
-        mensagens: [
-            { tipo: "recebida", texto: "Vai jantar em casa hoje?", hora: "18:42" },
-            { tipo: "enviada", texto: "vou", hora: "18:44" },
-            { tipo: "enviada", texto: "mãe aquele homem apareceu de novo", hora: "23:11" },
-            { tipo: "recebida", texto: "Que homem?", hora: "23:12" },
-            { tipo: "enviada", texto: "o da casa do lado", hora: "23:12" },
-            { tipo: "recebida", texto: "Laura, seu pai já olhou aquela casa.", hora: "23:13" },
-            { tipo: "recebida", texto: "Não tinha ninguém lá.", hora: "23:13" },
-            { tipo: "enviada", texto: "eu sei o que eu vi", hora: "23:14" },
-            { tipo: "recebida", texto: "Laura, você está me assustando. Fecha a janela e tenta dormir.", hora: "23:15" }
+    "mae": {
+        "nome": "Mãe",
+        "mensagens": [
+            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "Filha vai almoçar em casa?" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "acho que sim" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "Se vier compra leite" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "ta bom" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "E não esquece que sua tia perguntou do domingo" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "eu sei mãe kkkkk" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "22 anos só uma vez" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "enviada", "texto": "nem fiz 22 ainda 😭" },
+            { "dia": "13/10", "hora": "12:08", "tipo": "recebida", "texto": "faltam poucos dias" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "recebida", "texto": "Vou dormir cedo hoje" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "enviada", "texto": "ta" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "recebida", "texto": "Não fica até tarde estudando" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "enviada", "texto": "não vou" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "recebida", "texto": "boa noite filha ❤️" },
+            { "dia": "14/10", "hora": "20:31", "tipo": "enviada", "texto": "boa noite ❤️" }
         ]
     },
-
-    camilla: {
-        nome: "Camilla",
-        mensagens: [
-            { tipo: "enviada", texto: "amg", hora: "22:48" },
-            { tipo: "recebida", texto: "oii", hora: "22:48" },
-            { tipo: "enviada", texto: "ele apareceu", hora: "22:49" },
-            { tipo: "recebida", texto: "DE NOVO?", hora: "22:49" },
-            { tipo: "enviada", texto: "sim", hora: "22:49" },
-            { tipo: "enviada", texto: "mesma janela", hora: "22:50" },
-            { tipo: "recebida", texto: "Tira foto", hora: "22:50" },
-            { tipo: "enviada", texto: "já tentei", hora: "22:51" },
-            { tipo: "enviada", texto: "quando eu pego o celular ele sai", hora: "22:51" },
-            { tipo: "recebida", texto: "Isso não faz sentido", hora: "22:52" },
-            { tipo: "enviada", texto: "eu sei", hora: "22:53" },
-            { tipo: "enviada", texto: "ontem ele fez uma coisa diferente", hora: "22:53" },
-            { tipo: "recebida", texto: "oq?", hora: "22:54" },
-            { tipo: "enviada", texto: "apontou pra minha janela", hora: "22:54" },
-            { tipo: "recebida", texto: "Você tem certeza que viu ele de novo?", hora: "22:55" }
-        ]
-    },
-
-    matheus: {
-        nome: "Matheus",
-        mensagens: [
-            { tipo: "enviada", texto: "vc passou aqui ontem?", hora: "16:03" },
-            { tipo: "recebida", texto: "Não", hora: "16:08" },
-            { tipo: "enviada", texto: "certeza?", hora: "16:08" },
-            { tipo: "recebida", texto: "Laura eu tava trabalhando kkkkk", hora: "16:09" },
-            { tipo: "enviada", texto: "vi alguém perto da casa", hora: "16:10" },
-            { tipo: "recebida", texto: "Aquela casa de novo?", hora: "16:10" },
-            { tipo: "enviada", texto: "sim", hora: "16:11" },
-            { tipo: "recebida", texto: "Não tem ninguém naquela casa, Laura.", hora: "16:12" },
-            { tipo: "enviada", texto: "todo mundo fala isso", hora: "16:12" },
-            { tipo: "enviada", texto: "mas ninguém fica olhando ela de madrugada", hora: "16:13" }
-        ]
-    },
-
-    gabriela: {
-        nome: "Gabriela",
-        mensagens: [
-            { tipo: "recebida", texto: "Laura vc tá em casa?", hora: "19:31" },
-            { tipo: "enviada", texto: "sim pq", hora: "19:32" },
-            { tipo: "recebida", texto: "Nada", hora: "19:32" },
-            { tipo: "enviada", texto: "fala gabi", hora: "19:33" },
-            { tipo: "recebida", texto: "Acho que tô ficando paranoica por causa das coisas que vc falou kkkkk", hora: "19:34" },
-            { tipo: "enviada", texto: "como assim?", hora: "19:34" },
-            { tipo: "recebida", texto: "Achei que tinha alguém parado do outro lado da rua ontem", hora: "19:35" },
-            { tipo: "enviada", texto: "QUE HORAS?", hora: "19:35" },
-            { tipo: "recebida", texto: "Sei lá, quase meia noite", hora: "19:36" },
-            { tipo: "enviada", texto: "vc viu quem era?", hora: "19:36" },
-            { tipo: "recebida", texto: "Não", hora: "19:37" },
-            { tipo: "recebida", texto: "Depois eu te conto uma coisa estranha que aconteceu aqui.", hora: "19:38" }
-        ]
-    },
-
-    pai: {
-        nome: "Pai",
-        mensagens: [
-            { tipo: "enviada", texto: "pai consegue olhar aquela casa?", hora: "20:16" },
-            { tipo: "recebida", texto: "De novo isso filha?", hora: "20:20" },
-            { tipo: "enviada", texto: "por favor", hora: "20:20" },
-            { tipo: "enviada", texto: "só olha se tem alguém lá", hora: "20:21" },
-            { tipo: "recebida", texto: "Vou olhar a casa quando chegar.", hora: "20:23" }
-        ]
-    },
-
-    desconhecido: {
-        nome: "Desconhecido",
-        mensagens: [
-            { tipo: "recebida", texto: "Laura?", hora: "00:17" },
-            { tipo: "enviada", texto: "quem é?", hora: "00:19" },
-            { tipo: "recebida", texto: "Desculpa. Número errado.", hora: "00:20" },
-            { tipo: "enviada", texto: "como sabe meu nome?", hora: "00:20" }
-        ]
-    },
-
-    daniel: {
-        nome: "Daniel",
-        mensagens: [
-            { tipo: "recebida", texto: "O Matheus falou alguma coisa de mim?", hora: "14:21" },
-            { tipo: "enviada", texto: "não", hora: "14:32" },
-            { tipo: "recebida", texto: "Se falar me avisa", hora: "14:33" },
-            { tipo: "enviada", texto: "pq?", hora: "14:34" },
-            { tipo: "recebida", texto: "A gente discutiu", hora: "14:35" },
-            { tipo: "enviada", texto: "eu sei", hora: "14:35" },
-            { tipo: "recebida", texto: "Não quero mais confusão com vocês.", hora: "14:36" }
+    "bianca": {
+        "nome": "Bianca",
+        "mensagens": [
+            {
+                "dia": "11/10",
+                "hora": "22:17",
+                "tipo": "enviada",
+                "texto": "amiga ta acordada?"
+            },
+            {
+                "dia": "11/10",
+                "hora": "22:17",
+                "tipo": "recebida",
+                "texto": "infelizmente kkkkk"
+            },
+            {
+                "dia": "11/10",
+                "hora": "22:17",
+                "tipo": "enviada",
+                "texto": "a luz acendeu de novo"
+            },
+            {
+                "dia": "11/10",
+                "hora": "22:17",
+                "tipo": "recebida",
+                "texto": "naquela casa?"
+            },
+            {
+                "dia": "11/10",
+                "hora": "22:17",
+                "tipo": "enviada",
+                "texto": "sim"
+            },
+            {
+                "dia": "11/10",
+                "hora": "22:17",
+                "tipo": "recebida",
+                "texto": "laura vc precisa parar de ficar olhando isso"
+            },
+            {
+                "dia": "11/10",
+                "hora": "22:17",
+                "tipo": "enviada",
+                "texto": "eu tentei"
+            },
+            {
+                "dia": "11/10",
+                "hora": "22:17",
+                "tipo": "enviada",
+                "texto": "mas hoje tinha algu?m na janela"
+            },
+            {
+                "dia": "11/10",
+                "hora": "22:17",
+                "tipo": "recebida",
+                "texto": "de novo aquela mulher?"
+            },
+            {
+                "dia": "11/10",
+                "hora": "22:17",
+                "tipo": "enviada",
+                "texto": "parecia"
+            },
+            {
+                "dia": "12/10",
+                "hora": "00:03",
+                "tipo": "enviada",
+                "texto": "lembra da Camila que te falei?"
+            },
+            {
+                "dia": "12/10",
+                "hora": "00:03",
+                "tipo": "recebida",
+                "texto": "lembro"
+            },
+            {
+                "dia": "12/10",
+                "hora": "00:03",
+                "tipo": "enviada",
+                "texto": "achei umas coisas sobre o caso dela"
+            },
+            {
+                "dia": "12/10",
+                "hora": "00:03",
+                "tipo": "recebida",
+                "texto": "laura pelo amor de deus"
+            },
+            {
+                "dia": "12/10",
+                "hora": "00:03",
+                "tipo": "enviada",
+                "texto": "ela falava de uma casa vazia tamb?m"
+            },
+            {
+                "dia": "12/10",
+                "hora": "00:03",
+                "tipo": "recebida",
+                "texto": "isso n?o quer dizer que seja a mesma coisa"
+            },
+            {
+                "dia": "12/10",
+                "hora": "00:03",
+                "tipo": "enviada",
+                "texto": "eu sei"
+            },
+            {
+                "dia": "12/10",
+                "hora": "00:03",
+                "tipo": "enviada",
+                "texto": "mas ? estranho demais"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "enviada",
+                "texto": "tirei mais fotos"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "recebida",
+                "texto": "conseguiu pegar ela?"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "enviada",
+                "texto": "consegui"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "enviada",
+                "texto": "s? que tem uma coisa estranha"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "recebida",
+                "texto": "oq"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "enviada",
+                "texto": "comparei com as outras"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "enviada",
+                "texto": "ela t? sempre no MESMO lugar"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "recebida",
+                "texto": "como assim?"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "enviada",
+                "texto": "mesma posi??o"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "enviada",
+                "texto": "at? a cabe?a parece igual"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "recebida",
+                "texto": "credo"
+            },
+            {
+                "dia": "13/10",
+                "hora": "23:48",
+                "tipo": "enviada",
+                "texto": "amanh? te mostro"
+            },
+            {
+                "dia": "14/10",
+                "hora": "23:37",
+                "tipo": "enviada",
+                "texto": "bia"
+            },
+            {
+                "dia": "14/10",
+                "hora": "23:37",
+                "tipo": "recebida",
+                "texto": "oi"
+            },
+            {
+                "dia": "14/10",
+                "hora": "23:37",
+                "tipo": "enviada",
+                "texto": "acho que descobri uma coisa"
+            },
+            {
+                "dia": "14/10",
+                "hora": "23:37",
+                "tipo": "recebida",
+                "texto": "sobre a casa?"
+            },
+            {
+                "dia": "14/10",
+                "hora": "23:37",
+                "tipo": "enviada",
+                "texto": "sim"
+            },
+            {
+                "dia": "14/10",
+                "hora": "23:37",
+                "tipo": "enviada",
+                "texto": "se eu estiver certa tem algo a mais por tr?s da mulher na janela"
+            },
+            {
+                "dia": "14/10",
+                "hora": "23:37",
+                "tipo": "recebida",
+                "texto": "oq vc descobriu?"
+            },
+            {
+                "dia": "14/10",
+                "hora": "23:37",
+                "tipo": "recebida",
+                "texto": "Laura?"
+            },
+            {
+                "dia": "14/10",
+                "hora": "23:37",
+                "tipo": "recebida",
+                "texto": "???"
+            },
+            {
+                "dia": "14/10",
+                "hora": "23:37",
+                "tipo": "recebida",
+                "texto": "me responde"
+            },
+            {
+                "dia": "15/10",
+                "hora": "07:02",
+                "tipo": "recebida",
+                "texto": "Laura"
+            },
+            {
+                "dia": "15/10",
+                "hora": "07:02",
+                "tipo": "recebida",
+                "texto": "vc ta bem?"
+            },
+            {
+                "dia": "15/10",
+                "hora": "07:02",
+                "tipo": "recebida",
+                "texto": "me responde por favor"
+            }
         ]
     }
-
 };
 
 const conversation = document.getElementById('conversation');
@@ -160,10 +338,9 @@ Object.entries(conversas).forEach(([id, conversa]) => {
     button.type = 'button';
     button.className = 'chat-item';
     button.dataset.conversa = id;
-    if (id === 'desconhecido') button.classList.add('unread');
 
     const avatar = document.createElement('div');
-    avatar.className = `avatar ${id === 'desconhecido' ? 'bg-gray' : 'bg-pink'}`;
+    avatar.className = 'avatar bg-pink';
     avatar.textContent = conversa.nome.charAt(0);
     const preview = document.createElement('div');
     preview.className = 'chat-preview';
@@ -173,7 +350,7 @@ Object.entries(conversas).forEach(([id, conversa]) => {
     name.textContent = conversa.nome;
     const time = document.createElement('span');
     time.className = 'chat-time';
-    time.textContent = ultimaMensagem?.hora || '';
+    time.textContent = ultimaMensagem?.dia || '';
     const excerpt = document.createElement('p');
     excerpt.textContent = ultimaMensagem?.texto || '';
     title.append(name, time);
@@ -457,5 +634,81 @@ document.querySelectorAll('.app-back').forEach(button => {
 
 // Impede arrasto de imagens (para não estragar a imersão de celular)
 document.addEventListener('dragstart', (e) => e.preventDefault());
+
+
+// Calculadora: opera??es sequenciais, sem avaliar c?digo digitado.
+const calculatorDisplay = document.getElementById('calculator-display');
+let calcValue = '0';
+let calcStored = null;
+let calcOperator = null;
+let calcNewEntry = false;
+
+function atualizarCalculadora() {
+    calculatorDisplay.textContent = calcValue.replace('.', ',');
+}
+
+function calcularOperacao() {
+    const value = Number(calcValue);
+    let result;
+    switch (calcOperator) {
+        case '+': result = calcStored + value; break;
+        case '-': result = calcStored - value; break;
+        case '*': result = calcStored * value; break;
+        case '/': result = value === 0 ? NaN : calcStored / value; break;
+        default: return;
+    }
+    calcValue = Number.isFinite(result) ? String(Number(result.toPrecision(12))) : 'Erro';
+    calcStored = null;
+    calcOperator = null;
+}
+
+function usarCalculadora(key) {
+    if (key === 'clear' || calcValue === 'Erro') {
+        calcValue = '0';
+        calcStored = null;
+        calcOperator = null;
+        calcNewEntry = false;
+        if (key === 'clear') { atualizarCalculadora(); return; }
+    }
+    if (/^[0-9]$/.test(key)) {
+        if (calcNewEntry || calcValue === '0') calcValue = key;
+        else if (calcValue.replace(/[-.]/g, '').length < 12) calcValue += key;
+        calcNewEntry = false;
+    } else if (key === '.') {
+        if (calcNewEntry) calcValue = '0';
+        if (!calcValue.includes('.')) calcValue += '.';
+        calcNewEntry = false;
+    } else if (key === 'sign') {
+        if (Number(calcValue) !== 0) calcValue = calcValue.startsWith('-') ? calcValue.slice(1) : '-' + calcValue;
+    } else if (key === 'percent') {
+        calcValue = String(Number((Number(calcValue) / 100).toPrecision(12)));
+    } else if (['+', '-', '*', '/'].includes(key)) {
+        if (calcOperator && !calcNewEntry) calcularOperacao();
+        if (calcValue !== 'Erro') {
+            calcStored = Number(calcValue);
+            calcOperator = key;
+            calcNewEntry = true;
+        }
+    } else if (key === '=') {
+        if (calcOperator) calcularOperacao();
+        calcNewEntry = true;
+    } else if (key === 'delete' && !calcNewEntry) {
+        calcValue = calcValue.slice(0, -1);
+        if (!calcValue || calcValue === '-') calcValue = '0';
+    }
+    atualizarCalculadora();
+}
+
+document.querySelectorAll('[data-calc]').forEach(button => {
+    button.addEventListener('click', () => usarCalculadora(button.dataset.calc));
+});
+document.addEventListener('keydown', event => {
+    if (celularBloqueado || currentApp?.id !== 'calculator' || event.ctrlKey || event.metaKey || event.altKey) return;
+    const key = { Enter: '=', Escape: 'clear', Backspace: 'delete', ',': '.', '%': 'percent' }[event.key] || event.key;
+    if (/^[0-9.+*/=-]$/.test(key) || ['clear', 'delete', 'percent'].includes(key)) {
+        event.preventDefault();
+        usarCalculadora(key);
+    }
+});
 
 }

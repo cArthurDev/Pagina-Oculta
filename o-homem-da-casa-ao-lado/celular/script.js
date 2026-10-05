@@ -38,6 +38,53 @@ galleryImages.forEach(({ arquivo, descricao }, index) => {
 
 // Edite os textos abaixo para personalizar o histórico de cada conversa.
 const conversas = {
+    "ricardo": {
+        "nome": "Ricardo",
+        "mensagens": [
+            { "dia": "22/08", "hora": "22:46", "tipo": "recebida", "texto": "Chegou bem?" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "cheguei" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "recebida", "texto": "Podia ter avisado." },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "vc praticamente me expulsou de lá kkk" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "recebida", "texto": "Não começa." },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "tô brincando" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "mas eu odeio ter que sair escondida" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "recebida", "texto": "A gente já conversou sobre isso." },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "eu sei" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "recebida", "texto": "E você sabe que ninguém pode descobrir." },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "sei Ricardo" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "recebida", "texto": "Você contou pra Bianca?" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "não" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "ela acha que eu tava em outro lugar" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "recebida", "texto": "Melhor assim." },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "às vezes parece que vc só fala comigo quando quer me ver" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "recebida", "texto": "Não é verdade." },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "então prova kkk" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "recebida", "texto": "Quinta?" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "no mesmo lugar?" },
+            { "dia": "22/08", "hora": "22:46", "tipo": "recebida", "texto": "Sim." },
+            { "dia": "22/08", "hora": "22:46", "tipo": "enviada", "texto": "vejo se consigo" },
+            { "dia": "04/09", "hora": "23:11", "tipo": "enviada", "texto": "cheguei" },
+            { "dia": "04/09", "hora": "23:11", "tipo": "recebida", "texto": "Dessa vez avisou 😂" },
+            { "dia": "04/09", "hora": "23:11", "tipo": "enviada", "texto": "pra vc não reclamar" },
+            { "dia": "04/09", "hora": "23:11", "tipo": "recebida", "texto": "Gostei de hoje." },
+            { "dia": "04/09", "hora": "23:11", "tipo": "enviada", "texto": "eu também" },
+            { "dia": "04/09", "hora": "23:11", "tipo": "recebida", "texto": "Então para de dizer que vai acabar com isso." },
+            { "dia": "04/09", "hora": "23:11", "tipo": "enviada", "texto": "eu sei que não devia continuar" },
+            { "dia": "04/09", "hora": "23:11", "tipo": "recebida", "texto": "Mas continua." },
+            { "dia": "04/09", "hora": "23:11", "tipo": "enviada", "texto": "idiota kkkkk" },
+            { "dia": "04/09", "hora": "23:11", "tipo": "recebida", "texto": "Boa noite, Laura." },
+            { "dia": "04/09", "hora": "23:11", "tipo": "enviada", "texto": "boa noite ❤️" },
+            { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "[foto1.png]", "foto": "ricardo/foto1.png" },
+            { "dia": "06/09", "hora": "22:14", "tipo": "recebida", "texto": "Assim você complica minha vida kkk" },
+            { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "😂😂" },
+            { "dia": "06/09", "hora": "22:14", "tipo": "recebida", "texto": "Saudade de você." },
+            { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "eu também" },
+            { "dia": "06/09", "hora": "22:14", "tipo": "recebida", "texto": "Quando vou te ver de novo?" },
+            { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "essa semana a gente vê" },
+            { "dia": "06/09", "hora": "22:14", "tipo": "recebida", "texto": "Vou cobrar, hein" },
+            { "dia": "06/09", "hora": "22:14", "tipo": "enviada", "texto": "kkkkk pode cobrar" }
+        ]
+    },
     "sandra": {
         "nome": "Sandra Imóveis",
         "mensagens": [
@@ -81,7 +128,7 @@ const conversas = {
             { "dia": "12/10", "hora": "22:51", "tipo": "recebida", "texto": "E, por favor, não mexa no portão nem tente descobrir sozinha quem está lá." }
         ]
     },
-    "octavio": {
+    "otavio": {
         "nome": "Otávio",
         "mensagens": [
             { "dia": "30/09", "hora": "16:18", "tipo": "enviada", "texto": "Oi seu Otávio, boa tarde" },
@@ -508,6 +555,21 @@ function abrirConversa(button) {
         bubble.setAttribute('aria-label', `${mensagem.tipo === 'enviada' ? 'Você' : conversa.nome}, ${mensagem.hora}`);
         bubble.append(text, time);
         conversationHistory.append(bubble);
+        if (mensagem.foto) {
+            const image = new Image();
+            image.alt = `Foto enviada por ${mensagem.tipo === 'enviada' ? 'Laura' : conversa.nome}`;
+            image.onload = () => {
+                const photo = document.createElement('button');
+                photo.type = 'button';
+                photo.className = 'message-photo-button';
+                photo.setAttribute('aria-label', `Abrir imagem: ${image.alt}`);
+                photo.addEventListener('click', () => abrirImagemGaleria(image));
+                photo.append(image);
+                bubble.classList.add('message-photo');
+                text.replaceWith(photo);
+            };
+            image.src = mensagem.foto;
+        }
         if (mensagem.fotosSequenciais) {
             const photos = document.createElement('div');
             photos.className = 'message-photos';

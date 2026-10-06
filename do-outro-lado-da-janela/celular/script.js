@@ -320,32 +320,32 @@ const conversas = {
             {
                 "dia": "12/10",
                 "hora": "00:03",
+                "tipo": "recebida",
+                "texto": "amiga achei uma matéria sobre o caso da Camila"
+            },
+            {
+                "dia": "12/10",
+                "hora": "00:03",
                 "tipo": "enviada",
-                "texto": "lembra da Camila que te falei?"
+                "texto": "a Camila que eu conhecia?"
             },
             {
                 "dia": "12/10",
                 "hora": "00:03",
                 "tipo": "recebida",
-                "texto": "lembro"
-            },
-            {
-                "dia": "12/10",
-                "hora": "00:03",
-                "tipo": "enviada",
-                "texto": "achei umas coisas sobre o caso dela"
+                "texto": "sim, vou te mandar pra vc ler"
             },
             {
                 "dia": "12/10",
                 "hora": "00:03",
                 "tipo": "recebida",
-                "texto": "laura pelo amor de deus"
+                "texto": "na matéria diz que ela falava de uma casa vazia também"
             },
             {
                 "dia": "12/10",
                 "hora": "00:03",
                 "tipo": "enviada",
-                "texto": "ela falava de uma casa vazia também"
+                "texto": "igual essa aqui da frente?"
             },
             {
                 "dia": "12/10",

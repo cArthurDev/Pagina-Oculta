@@ -198,8 +198,8 @@ const conversas = {
             { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "quero te mostrar umas fotos" },
             { "dia": "13/10", "hora": "18:42", "tipo": "recebida", "texto": "fotos de que?" },
             { "dia": "13/10", "hora": "18:42", "tipo": "enviada", "texto": "amanhã eu explico" },
-            { "dia": "14/10", "hora": "17:21", "tipo": "recebida", "texto": "cheguei" },
-            { "dia": "14/10", "hora": "17:21", "tipo": "enviada", "texto": "to descendo" }
+            { "dia": "13/10", "hora": "17:21", "tipo": "recebida", "texto": "cheguei" },
+            { "dia": "13/10", "hora": "17:21", "tipo": "enviada", "texto": "to descendo" }
         ]
     },
     "julia": {
@@ -805,7 +805,7 @@ document.getElementById('unlock-form').addEventListener('submit', event => {
     lockScreen.classList.remove('active');
     lockScreen.inert = true;
     homeScreen.inert = false;
-    document.querySelectorAll('.app-view').forEach(screen => { screen.inert = false; });
+document.querySelectorAll('.app-view').forEach(screen => { screen.inert = true; });
     homeScreen.classList.add('active');
     homeScreen.setAttribute('tabindex', '-1');
     homeScreen.focus();
@@ -819,6 +819,11 @@ apps.forEach(app => {
         const targetScreen = document.getElementById(appId);
         
         if (targetScreen) {
+            homeScreen.inert = true;
+            document.querySelectorAll('.app-view').forEach(screen => {
+                screen.inert = screen !== targetScreen;
+                if (screen !== targetScreen) screen.classList.remove('active');
+            });
             // Esconde a home suavemente (efeito iOS)
             homeScreen.classList.remove('active');
             homeScreen.classList.add('inactive-left');
@@ -826,6 +831,7 @@ apps.forEach(app => {
             // Mostra o app
             targetScreen.classList.add('active');
             currentApp = targetScreen;
+            targetScreen.querySelector('.app-back')?.focus({ preventScroll: true });
         }
     });
 });
@@ -838,10 +844,13 @@ function voltarParaInicio() {
         fecharNota(false);
         // Esconde o app atual
         currentApp.classList.remove('active');
+        currentApp.inert = true;
         
         // Restaura a tela inicial
         homeScreen.classList.remove('inactive-left');
         homeScreen.classList.add('active');
+        homeScreen.inert = false;
+        homeScreen.querySelector(`[data-app="${currentApp.id}"]`)?.focus({ preventScroll: true });
         
         currentApp = null;
     }

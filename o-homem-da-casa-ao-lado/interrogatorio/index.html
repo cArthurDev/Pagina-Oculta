@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Interrogatório | Página Oculta</title>
+  <title>Interrogatério | Página Oculta</title>
   <link rel="icon" type="image/png" href="../../images/logo-branca.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,16 +20,23 @@
   <header class="nav container">
     <a class="brand" href="../../index.html"><img src="../../images/logo-branca.png" alt="Página Oculta"></a>
   </header>
-  <main class="container interrogation">
+  <main class="container statements-page">
     <div class="case-heading">
       <p class="eyebrow">caso 002 · arquivo de interrogatório</p>
-      <h1>Quem você quer<br><em>questionar?</em></h1>
-      <p>Selecione um dos envolvidos. Cada depoimento pode mudar o rumo da investigação.</p>
+      <h1>Leia os<br><em>interrogatórios.</em></h1>
+      <p>Escolha um envolvido para consultar seu segundo interrogatório. Cada palavra pode ser uma pista.</p>
     </div>
-    <section class="suspects" id="suspects" aria-label="Suspeitos"></section>
-    <section class="question-panel">
-      <div class="question-top"><div><p class="eyebrow">interrogatório em andamento</p><h2 id="name">Carregando...</h2></div><p id="role"></p></div>
-      <div class="questions" id="questions"></div>
+    <section class="suspects" id="suspects" aria-label="Envolvidos"></section>
+    <section class="testimony-panel" aria-live="polite">
+      <div class="question-top">
+        <div><p class="eyebrow">interrogatório registrado</p><h2 id="name">Carregando...</h2></div>
+        <p id="role"></p>
+      </div>
+      <div class="testimony-copy">
+        <span>transcrição</span>
+        <p id="testimony" aria-label="Interrogatério"></p><i class="typing-cursor" aria-hidden="true"></i>
+      </div>
+      <button class="replay" id="replay" type="button">reler interrogatório ↻</button>
     </section>
   </main>
   <script src="interrogatorio.js"></script>

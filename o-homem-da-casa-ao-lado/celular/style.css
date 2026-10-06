@@ -143,6 +143,7 @@ body {
 .screen.inactive-left {
     transform: translateX(-30%);
     opacity: 0.5;
+    pointer-events: none;
 }
 
 /* Tela Inicial */
@@ -712,7 +713,16 @@ button, a, .app-icon { -webkit-tap-highlight-color: transparent; touch-action: m
 .passcode-keypad { flex-shrink: 0; }
 .passcode-actions { flex-shrink: 0; }
 #unlock-error { position: static; min-height: 18px; margin-top: 8px; order: 1; }
-.calculator-content { padding-bottom: calc(var(--home-height) + 12px); overflow-y: auto; }
+.calculator-content {
+    position: absolute;
+    inset: var(--header-height) 0 var(--home-height);
+    height: auto;
+    padding: 16px 18px;
+    overflow-y: auto;
+    justify-content: flex-start;
+    overscroll-behavior: contain;
+}
+.calculator-display { flex-shrink: 0; margin-top: auto; }
 .calculator-keypad { flex-shrink: 0; }
 .calculator-display { font-size: 40px; }
 .gallery-viewer { padding-top: max(64px, calc(env(safe-area-inset-top) + 52px)); padding-bottom: max(20px, env(safe-area-inset-bottom)); }
@@ -750,6 +760,23 @@ button, a, .app-icon { -webkit-tap-highlight-color: transparent; touch-action: m
     .calculator-keypad { grid-auto-rows: 44px; }
     .calculator-key { aspect-ratio: auto; border-radius: 22px; }
     .calculator-display { font-size: 30px; }
+}
+@media (orientation: landscape) and (max-height: 480px) {
+    body { padding: 42px 12px 8px; }
+    .ambiente { width: min(100%, 680px); height: 100%; margin: 0; }
+    .phone-container { width: 100%; height: 100%; padding: 6px; border-radius: 24px; }
+    .phone-screen { border-radius: 18px; }
+    .phone-button-left, .phone-button-right { display: none; }
+    .phone-notch { top: 6px; height: 20px; }
+    .unlock-form { display: grid; grid-template-columns: 1fr 1fr; align-content: center; column-gap: 24px; padding: 44px 24px 48px; }
+    .unlock-form h2, .passcode-dots, .passcode-actions, #unlock-error { grid-column: 1; }
+    .passcode-dots { justify-content: center; margin-top: 12px; }
+    .passcode-keypad { grid-column: 2; grid-row: 1 / span 4; margin: 0; justify-content: center; }
+    .passcode-actions { margin-top: 12px; padding: 0; }
+    #unlock-error { margin-top: 4px; }
+    .calculator-content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 1.3fr); align-items: center; gap: 16px; }
+    .calculator-display { margin: 0; font-size: 30px; }
+    .calculator-keypad { grid-auto-rows: 44px; gap: 6px; }
 }
 @media (prefers-reduced-motion: reduce) {
     .screen, .app-icon, .passcode-keypad button { transition: none; }

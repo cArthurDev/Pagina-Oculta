@@ -19,7 +19,7 @@ window.CASOS = {
     codigo: 'ARQ. 002',
     acesso: 'acesso/do-outro-lado-da-janela/',
     imagem: 'images/do-outro-lado-da-janela.png',
-    senha: '0002',
+    senha: '0118',
     paginas: {
       celular: 'do-outro-lado-da-janela/celular/index.html',
       interrogatorio: 'do-outro-lado-da-janela/interrogatorio/index.html',

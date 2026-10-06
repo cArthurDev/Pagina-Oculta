@@ -81,6 +81,10 @@
                             <div class="icon bg-yellow"><i class="fas fa-sticky-note"></i></div>
                             <span>Notas</span>
                         </button>
+                        <button type="button" class="app-icon" data-app="voice-recordings">
+                            <div class="icon bg-recordings"><i class="fas fa-microphone" aria-hidden="true"></i></div>
+                            <span>Gravações de Voz</span>
+                        </button>
                         <button type="button" class="app-icon calculator-app-icon" data-app="calculator">
                             <div class="icon bg-calculator"><i class="fas fa-calculator" aria-hidden="true"></i></div>
                             <span>Calculadora</span>
@@ -116,6 +120,20 @@
                             <button type="button" class="calculator-key zero" data-calc="0" aria-label="0">0</button>
                             <button type="button" class="calculator-key " data-calc="." aria-label="Vírgula decimal">,</button>
                             <button type="button" class="calculator-key operator" data-calc="=" aria-label="Igual">=</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="voice-recordings" class="screen app-view" inert>
+                    <div class="app-header blur-header">
+                        <button type="button" class="app-back" aria-label="Voltar para a tela inicial">&#8249;</button>
+                        <h2>Gravações de Voz</h2>
+                    </div>
+                    <div class="app-content scrollable">
+                        <div id="recordings-list" class="recordings-list" aria-label="Gravações salvas"></div>
+                        <div id="recordings-empty" class="recordings-empty">
+                            <i class="fas fa-microphone" aria-hidden="true"></i>
+                            <p>Nenhuma gravação salva.</p>
                         </div>
                     </div>
                 </div>
@@ -378,6 +396,8 @@
     </dialog>
 
     <script src="galeria/imagens.js"></script>
+    <script src="audios/gravacoes.js"></script>
+    <script src="gravacoes.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

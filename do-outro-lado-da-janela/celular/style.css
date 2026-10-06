@@ -1,3 +1,14 @@
+.bg-recordings { background: linear-gradient(145deg, #393939, #101010); color: #ff554e; }
+.recordings-list { display: grid; gap: 14px; }
+.recording-card { padding: 18px 14px; border-radius: 16px; background: #252527; border: 1px solid #38383a; }
+.recording-card h3 { font-size: 16px; line-height: 1.4; overflow-wrap: anywhere; margin-bottom: 8px; }
+.recording-date { font-size: 12px; color: #aaa; margin-bottom: 14px; }
+.recording-card audio { display: block; width: 100%; min-width: 0; height: 44px; }
+.recording-error { font-size: 12px; color: #ff918c; margin-top: 10px; }
+.recordings-empty { text-align: center; color: #aaa; padding: 70px 16px; }
+.recordings-empty i { display: block; font-size: 38px; color: #ff554e; margin-bottom: 18px; }
+.recordings-empty[hidden], .recording-error[hidden] { display: none; }
+
 /* Reset Básico */
 * {
     margin: 0;

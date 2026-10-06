@@ -14,18 +14,18 @@ window.CASOS = {
       revelacao: 'oquarto307/casoresolvido/revelacao/index.html'
     }
   },
-  homemdacasaaolado: {
-    titulo: 'O Homem da Casa ao Lado',
+  dooutroladodajanela: {
+    titulo: 'DO OUTRO LADO DA JANELA',
     codigo: 'ARQ. 002',
-    acesso: 'acesso/o-homem-da-casa-ao-lado/',
-    imagem: 'images/ohomemdacasaaolado.png',
+    acesso: 'acesso/do-outro-lado-da-janela/',
+    imagem: 'images/do-outro-lado-da-janela.png',
     senha: '0002',
     paginas: {
-      celular: 'o-homem-da-casa-ao-lado/celular/index.html',
-      interrogatorio: 'o-homem-da-casa-ao-lado/interrogatorio/index.html',
-      esclarecimentos: 'o-homem-da-casa-ao-lado/esclarecimentos/index.html',
-      casoresolvido: 'o-homem-da-casa-ao-lado/casoresolvido/index.html',
-      revelacao: 'o-homem-da-casa-ao-lado/casoresolvido/revelacao/index.html'
+      celular: 'do-outro-lado-da-janela/celular/index.html',
+      interrogatorio: 'do-outro-lado-da-janela/interrogatorio/index.html',
+      esclarecimentos: 'do-outro-lado-da-janela/esclarecimentos/index.html',
+      casoresolvido: 'do-outro-lado-da-janela/casoresolvido/index.html',
+      revelacao: 'do-outro-lado-da-janela/casoresolvido/revelacao/index.html'
     }
   }
 };

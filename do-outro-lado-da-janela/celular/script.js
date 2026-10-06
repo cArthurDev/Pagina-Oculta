@@ -38,6 +38,31 @@ galleryImages.forEach(({ arquivo, descricao }, index) => {
 
 // Edite os textos abaixo para personalizar o histórico de cada conversa.
 const conversas = {
+    "marcelo": {
+        "nome": "Marcelo",
+        "mensagens": [
+            { "dia": "14/10", "hora": "19:42", "tipo": "enviada", "texto": "Oi Marcelo, tudo bem?" },
+            { "dia": "14/10", "hora": "19:44", "tipo": "recebida", "texto": "Opa, tudo sim. E você?" },
+            { "dia": "14/10", "hora": "19:45", "tipo": "enviada", "texto": "Então, lembra daquele problema elétrico que eu tinha comentado?" },
+            { "dia": "14/10", "hora": "19:47", "tipo": "recebida", "texto": "Lembro sim" },
+            { "dia": "14/10", "hora": "19:47", "tipo": "enviada", "texto": "Agora as câmeras aqui de casa pararam de funcionar também" },
+            { "dia": "14/10", "hora": "19:48", "tipo": "enviada", "texto": "Do nada" },
+            { "dia": "14/10", "hora": "19:51", "tipo": "recebida", "texto": "Todas?" },
+            { "dia": "14/10", "hora": "19:51", "tipo": "enviada", "texto": "Sim, nenhuma tá funcionando" },
+            { "dia": "14/10", "hora": "19:54", "tipo": "recebida", "texto": "Pode ser problema elétrico" },
+            { "dia": "14/10", "hora": "19:54", "tipo": "recebida", "texto": "Mas teria que olhar aí pra ter certeza" },
+            { "dia": "14/10", "hora": "19:55", "tipo": "enviada", "texto": "Você consegue vir aqui ver?" },
+            { "dia": "14/10", "hora": "20:01", "tipo": "recebida", "texto": "Por enquanto tô sem agenda" },
+            { "dia": "14/10", "hora": "20:01", "tipo": "recebida", "texto": "Essa semana tá bem corrida pra mim" },
+            { "dia": "14/10", "hora": "20:02", "tipo": "enviada", "texto": "Ah tá" },
+            { "dia": "14/10", "hora": "20:03", "tipo": "enviada", "texto": "É que tá acontecendo umas coisas estranhas aqui e minha mãe queria as câmeras funcionando" },
+            { "dia": "14/10", "hora": "20:07", "tipo": "recebida", "texto": "Entendi" },
+            { "dia": "14/10", "hora": "20:08", "tipo": "recebida", "texto": "Assim que eu conseguir um horário te aviso" },
+            { "dia": "14/10", "hora": "20:09", "tipo": "enviada", "texto": "Tá bom" },
+            { "dia": "14/10", "hora": "20:09", "tipo": "enviada", "texto": "Obrigada" },
+            { "dia": "14/10", "hora": "20:12", "tipo": "recebida", "texto": "Nada 👍" }
+        ]
+    },
     "mae": {
         "nome": "Mãe",
         "mensagens": [

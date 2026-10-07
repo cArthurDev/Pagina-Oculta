@@ -1,0 +1,51 @@
+{
+  "id": "ricardo-vasconcelos",
+  "nome": "Ricardo Vasconcelos",
+  "idade": 46,
+  "papel": "Suspeito",
+  "depoimento": "Este depoimento aguarda conte?do.",
+  "fases": [
+    {
+      "fase": 1,
+      "titulo": "O passado",
+      "perguntas": [
+        {
+          "pergunta": "Qual era sua relação com Anita?",
+          "resposta": "Ela trabalhou para mim durante um período. Não éramos próximos. Era apenas mais uma funcionária."
+        },
+        {
+          "pergunta": "Por que algumas antigas funcionárias descrevem seu comportamento com as mulheres como inadequado?",
+          "resposta": "Funcionário insatisfeito fala qualquer coisa. Sempre fui exigente e algumas pessoas confundem isso."
+        }
+      ]
+    },
+    {
+      "fase": 2,
+      "titulo": "A denúncia",
+      "perguntas": [
+        {
+          "pergunta": "Anita chegou a ameaçar denunciá-lo?",
+          "resposta": "Houve uma discussão. Ela interpretou uma situação de maneira errada e disse coisas no calor do momento."
+        },
+        {
+          "pergunta": "Por que Anita saiu chorando depois de ficar sozinha com o senhor em uma sala?",
+          "resposta": "Não vou aceitar insinuações. Tivemos uma discussão, só isso. Eu nunca encostei naquela garota."
+        }
+      ]
+    },
+    {
+      "fase": 3,
+      "titulo": "O motivo",
+      "perguntas": [
+        {
+          "pergunta": "Uma denúncia de Anita poderia destruir sua reputação. O senhor precisava que ela permanecesse calada, correto?",
+          "resposta": "Precisava que ela parasse de espalhar aquela história. Isso não significa que eu quisesse machucá-la."
+        },
+        {
+          "pergunta": "Anita morreu antes de conseguir denunciá-lo. Isso não foi conveniente para o senhor?",
+          "resposta": "Eu queria que aquela história desaparecesse, não Anita. Se estão tentando transformar isso em motivo para assassinato, estão perdendo tempo."
+        }
+      ]
+    }
+  ]
+}

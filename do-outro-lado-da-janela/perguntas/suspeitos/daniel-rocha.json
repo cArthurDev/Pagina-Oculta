@@ -1,0 +1,51 @@
+{
+  "id": "daniel-rocha",
+  "nome": "Daniel Rocha",
+  "idade": 24,
+  "papel": "Suspeito",
+  "depoimento": "Este depoimento aguarda conte?do.",
+  "fases": [
+    {
+      "fase": 1,
+      "titulo": "A mentira",
+      "perguntas": [
+        {
+          "pergunta": "Você já conhecia o caso Anita antes do desaparecimento de Laura?",
+          "resposta": "Sim. Laura estava pesquisando sobre ela. Eu menti antes porque não queria me envolver nessa história."
+        },
+        {
+          "pergunta": "Foi Laura quem contou sobre Anita para você?",
+          "resposta": "Foi. Ela encontrou o caso enquanto pesquisava as casas abandonadas e começou a achar que havia alguma ligação."
+        }
+      ]
+    },
+    {
+      "fase": 2,
+      "titulo": "A investigação de Laura",
+      "perguntas": [
+        {
+          "pergunta": "Você acompanhou Laura até a antiga casa de Anita?",
+          "resposta": "Uma vez. Eu fiquei esperando do lado de fora. Laura foi sozinha e, quando voltou, estava estranha."
+        },
+        {
+          "pergunta": "O que Laura descobriu sobre Anita?",
+          "resposta": "Não contou tudo. Só disse que os acontecimentos eram parecidos demais para serem coincidência e que alguém poderia estar repetindo aquilo."
+        }
+      ]
+    },
+    {
+      "fase": 3,
+      "titulo": "As mensagens apagadas",
+      "perguntas": [
+        {
+          "pergunta": "Por que apagou suas conversas com Laura depois que ela desapareceu?",
+          "resposta": "Entrei em pânico. As mensagens mostravam que eu sabia onde ela estava indo e o que estava investigando."
+        },
+        {
+          "pergunta": "Laura descobriu alguma coisa que poderia comprometer você?",
+          "resposta": "Não. Mas descobriu alguma coisa. Ela voltou daquele lugar e disse: “Acho que alguém está repetindo o que fizeram com Anita.” Depois disso, tudo mudou."
+        }
+      ]
+    }
+  ]
+}

@@ -35,3 +35,6 @@ https://pagina-oculta.vercel.app/do-outro-lado-da-janela/esclarecimentos/
 
 do-outro-lado-da-janela-caso-resolvido.png
 https://pagina-oculta.vercel.app/do-outro-lado-da-janela/casoresolvido/
+
+do-outro-lado-da-janela-perguntas.png
+https://pagina-oculta.vercel.app/do-outro-lado-da-janela/perguntas/

@@ -1,0 +1,51 @@
+{
+  "id": "marcelo-azevedo",
+  "nome": "Marcelo Azevedo",
+  "idade": 39,
+  "papel": "Suspeito",
+  "depoimento": "Este depoimento aguarda conte?do.",
+  "fases": [
+    {
+      "fase": 1,
+      "titulo": "A casa de Anita",
+      "perguntas": [
+        {
+          "pergunta": "O senhor já esteve dentro da casa de Anita?",
+          "resposta": "Uma vez. Fiz um serviço elétrico lá. Não mencionei porque aconteceu há muitos anos."
+        },
+        {
+          "pergunta": "Por que seu nome aparece relacionado à residência de Anita?",
+          "resposta": "Porque fui contratado para resolver um problema elétrico. Entrei, fiz meu serviço e fui embora."
+        }
+      ]
+    },
+    {
+      "fase": 2,
+      "titulo": "As luzes",
+      "perguntas": [
+        {
+          "pergunta": "Anita perguntou se uma lâmpada poderia ser controlada de fora da residência?",
+          "resposta": "Perguntou. Expliquei que existiam maneiras de fazer isso com temporizadores, controles e adaptações."
+        },
+        {
+          "pergunta": "Pouco depois da sua visita, Anita começou a relatar luzes acendendo e apagando sozinhas. Coincidência?",
+          "resposta": "Deve ser. Eu não instalei nada para assustar aquela garota. Só fiz o serviço que me pediram."
+        }
+      ]
+    },
+    {
+      "fase": 3,
+      "titulo": "O padrão",
+      "perguntas": [
+        {
+          "pergunta": "O senhor esteve nas residências de Anita e das outras vítimas. Como explica isso?",
+          "resposta": "Sou eletricista. Entrar na casa das pessoas faz parte do meu trabalho. Isso não me transforma em assassino."
+        },
+        {
+          "pergunta": "O senhor tinha acesso às casas e conhecimento para manipular as luzes usadas para assustar as vítimas. Por que escondeu Anita?",
+          "resposta": "Porque saber fazer uma coisa não significa ter feito. Se alguém usou algo que eu instalei para assustá-las, não fui eu."
+        }
+      ]
+    }
+  ]
+}

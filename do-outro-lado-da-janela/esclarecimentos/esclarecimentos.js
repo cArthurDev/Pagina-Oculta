@@ -29,10 +29,6 @@ Investigador: Por que não contou isso antes?
 
 Ricardo: Não queria me envolver. Com meu passado, qualquer coisa vira motivo pra apontarem pra mim.
 
-Investigador: Onde estava quando Laura desapareceu?
-
-Ricardo: Fui a uma farmácia 24 horas. Paguei no cartão. Devem ter câmeras.
-
 Investigador: Mais alguma coisa?
 
 Ricardo: Sim. Vocês estão preocupados demais com quem estava dentro daquela casa.

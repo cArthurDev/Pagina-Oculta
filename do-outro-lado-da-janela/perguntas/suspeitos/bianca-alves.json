@@ -1,0 +1,51 @@
+{
+  "id": "bianca-alves",
+  "nome": "Bianca Alves",
+  "idade": 22,
+  "papel": "Suspeito",
+  "depoimento": "Este depoimento aguarda conte?do.",
+  "fases": [
+    {
+      "fase": 1,
+      "titulo": "A amizade escondida",
+      "perguntas": [
+        {
+          "pergunta": "Você conhecia Anita?",
+          "resposta": "Conhecia. Eu era mais nova e conversávamos escondido algumas vezes. Nunca contei porque não achei que fosse importante."
+        },
+        {
+          "pergunta": "Por que você nunca mencionou sua amizade com Anita?",
+          "resposta": "Porque sabia que vocês começariam a fazer exatamente isso: tentar encontrar alguma ligação entre mim e tudo que aconteceu."
+        }
+      ]
+    },
+    {
+      "fase": 2,
+      "titulo": "Os medos",
+      "perguntas": [
+        {
+          "pergunta": "Anita contava a você sobre as aparições?",
+          "resposta": "Contava. O estranho é que ela me falava sobre alguma coisa que tinha medo e, dias depois, dizia ter visto exatamente aquilo."
+        },
+        {
+          "pergunta": "Você sabia do que Anita tinha medo?",
+          "resposta": "De muita coisa. Ela confiava em mim. Às vezes dizia que parecia que alguém conhecia os medos dela e estava transformando aquilo em realidade."
+        }
+      ]
+    },
+    {
+      "fase": 3,
+      "titulo": "O silêncio",
+      "perguntas": [
+        {
+          "pergunta": "Quando Matheus e Gabriela relataram coisas parecidas, por que permaneceu calada?",
+          "resposta": "Porque percebi a semelhança. E também percebi que eu era uma das pessoas que conhecia os medos de Anita."
+        },
+        {
+          "pergunta": "Se alguém precisava conhecer os medos das vítimas para criar aquelas aparições, você tinha exatamente essa informação sobre Anita, não tinha?",
+          "resposta": "Tinha. É justamente por isso que fiquei calada. Sabia que, quando descobrissem, vocês olhariam para mim."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "otavio-brandao",
+  "nome": "Otávio Brandão",
+  "idade": 63,
+  "papel": "Suspeito",
+  "depoimento": "Este depoimento aguarda conte?do.",
+  "fases": [
+    {
+      "fase": 1,
+      "titulo": "A relação escondida",
+      "perguntas": [
+        {
+          "pergunta": "O senhor conhecia Anita melhor do que afirmou anteriormente?",
+          "resposta": "Sim. Muito melhor. Anita me procurava algumas vezes. Preferi esconder isso porque nossa relação envolvia assuntos pessoais."
+        },
+        {
+          "pergunta": "Por que Anita frequentava sua casa?",
+          "resposta": "Por minha causa. Minha esposa sabia que ela aparecia lá. Era uma situação complicada e nós três preferíamos que ninguém soubesse."
+        }
+      ]
+    },
+    {
+      "fase": 2,
+      "titulo": "“Assumir”",
+      "perguntas": [
+        {
+          "pergunta": "Testemunhas ouviram Anita dizendo que o senhor precisava “assumir o que fez”. O que ela queria dizer?",
+          "resposta": "Algo que aconteceu muitos anos atrás. Anita acreditava que eu tinha uma obrigação com ela. Eu discordava da maneira como ela queria resolver aquilo."
+        },
+        {
+          "pergunta": "Por que Anita dizia que o senhor tinha uma obrigação com ela?",
+          "resposta": "Porque existia uma história entre nós que começou muito antes de tudo isso. Ela queria que eu reconhecesse publicamente algo que mantivemos escondido durante anos."
+        }
+      ]
+    },
+    {
+      "fase": 3,
+      "titulo": "O segredo",
+      "perguntas": [
+        {
+          "pergunta": "Anita ameaçou revelar o que existia entre vocês?",
+          "resposta": "Sim. Ela disse que estava cansada de ser mantida escondida e que, se eu não assumisse a situação, ela mesma contaria tudo."
+        },
+        {
+          "pergunta": "Anita morreu levando consigo um segredo capaz de destruir sua vida. Isso não lhe dava um motivo?",
+          "resposta": "Eu tinha motivos para querer que Anita permanecesse em silêncio. Não para querer que ela morresse. Se aquele segredo viesse à tona, mudaria a forma como muitas pessoas enxergam meu passado."
+        }
+      ]
+    }
+  ]
+}

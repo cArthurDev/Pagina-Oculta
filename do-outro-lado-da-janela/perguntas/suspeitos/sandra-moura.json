@@ -1,0 +1,51 @@
+{
+  "id": "sandra-moura",
+  "nome": "Sandra Moura",
+  "idade": 58,
+  "papel": "Suspeito",
+  "depoimento": "Este depoimento aguarda conte?do.",
+  "fases": [
+    {
+      "fase": 1,
+      "titulo": "A ligação",
+      "perguntas": [
+        {
+          "pergunta": "A senhora conhecia Anita antes da morte dela?",
+          "resposta": "Conhecia. Ela aparecia com frequência perto dos imóveis abandonados que eu administrava. Algumas vezes chegou a entrar sem autorização."
+        },
+        {
+          "pergunta": "Anita já entrou em algum dos imóveis administrados pela senhora?",
+          "resposta": "Várias vezes. Eu mandava ela embora, mas ela sempre voltava. Chegou um momento em que precisei encontrar outra forma de afastá-la."
+        }
+      ]
+    },
+    {
+      "fase": 2,
+      "titulo": "As aparições",
+      "perguntas": [
+        {
+          "pergunta": "O que a senhora fez para impedir Anita de voltar?",
+          "resposta": "Resolvi assustá-la. Fazia barulhos e deixava algumas silhuetas nas casas. Queria que ela pensasse que havia alguém lá dentro."
+        },
+        {
+          "pergunta": "Anita dizia que via vultos e figuras nesses imóveis. A senhora teve alguma participação nisso?",
+          "resposta": "No começo... sim. Algumas dessas coisas fui eu. Era uma brincadeira para assustá-la. Mas depois ela começou a ver coisas que eu não tinha colocado."
+        }
+      ]
+    },
+    {
+      "fase": 3,
+      "titulo": "O confronto",
+      "perguntas": [
+        {
+          "pergunta": "As aparições começaram com a senhora. Como sabemos que não repetiu isso com as outras vítimas?",
+          "resposta": "Porque eu parei depois de Anita. Quando soube do estado em que ela ficou, percebi que tinha ido longe demais."
+        },
+        {
+          "pergunta": "A senhora tinha acesso às casas abandonadas e já utilizou falsas aparições para aterrorizar Anita. Por que não deveríamos considerá-la suspeita?",
+          "resposta": "Porque assustar alguém foi uma estupidez. Matar é outra coisa. Eu assustei Anita, mas não matei aquela garota."
+        }
+      ]
+    }
+  ]
+}

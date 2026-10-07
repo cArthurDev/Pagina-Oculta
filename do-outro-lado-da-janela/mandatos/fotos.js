@@ -4,5 +4,5 @@ window.MANDATOS = [
   { nome: 'Sandra Moura', pasta: 'Sandra Moura', fotos: [] },
   { nome: 'Ricardo Vasconcelos', pasta: 'Ricardo Vasconcelos', fotos: [] },
   { nome: 'Marcelo Azevedo', pasta: 'Marcelo Azevedo', fotos: [] },
-  { nome: 'Otávio Brandão', pasta: 'Otávio Brandão', fotos: [] }
+  { nome: 'Otávio Brandão', pasta: 'Otávio Brandão', fotos: ['foto-01.png'] }
 ];

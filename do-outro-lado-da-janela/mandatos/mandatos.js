@@ -14,7 +14,7 @@ if (window.CaseAccess?.allowed) {
     const image = document.querySelector('#viewer-image');
     image.src = photoUrl(index);
     image.alt = caption;
-    document.querySelector('#original').href = photoUrl(index);
+
     document.querySelector('#previous').disabled = index === 0;
     document.querySelector('#next').disabled = index === person.fotos.length - 1;
   }

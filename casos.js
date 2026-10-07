@@ -22,6 +22,7 @@ window.CASOS = {
     senha: '0118',
     paginas: {
       celular: 'do-outro-lado-da-janela/celular/index.html',
+      perguntas: 'do-outro-lado-da-janela/perguntas/index.html',
       interrogatorio: 'do-outro-lado-da-janela/interrogatorio/index.html',
       esclarecimentos: 'do-outro-lado-da-janela/esclarecimentos/index.html',
       casoresolvido: 'do-outro-lado-da-janela/casoresolvido/index.html',

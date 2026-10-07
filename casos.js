@@ -25,6 +25,7 @@ window.CASOS = {
       perguntas: 'do-outro-lado-da-janela/perguntas/index.html',
       interrogatorio: 'do-outro-lado-da-janela/interrogatorio/index.html',
       esclarecimentos: 'do-outro-lado-da-janela/esclarecimentos/index.html',
+      mandatos: 'do-outro-lado-da-janela/mandatos/index.html',
       casoresolvido: 'do-outro-lado-da-janela/casoresolvido/index.html',
       revelacao: 'do-outro-lado-da-janela/casoresolvido/revelacao/index.html'
     }

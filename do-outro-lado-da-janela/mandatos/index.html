@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR" data-caso="dooutroladodajanela" data-secao="mandatos">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mandados de busca | Página Oculta</title>
+  <link rel="icon" href="../../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../horror.css">
+  <link rel="stylesheet" href="../../case.css">
+  <link rel="stylesheet" href="mandatos.css">
+  <script src="../../casos.js"></script>
+  <script src="../../acesso/controle.js"></script>
+  <script src="fotos.js" defer></script>
+  <script src="mandatos.js" defer></script>
+</head>
+<body class="case-body">
+  <div class="noise" aria-hidden="true"></div>
+  <header class="nav container"><a class="brand" href="../../index.html"><img src="../../images/logo-branca.png" alt="Página Oculta"></a><span class="archive-label">ARQ. 002</span></header>
+  <main class="container">
+    <div class="case-heading"><p class="eyebrow">do outro lado da janela · documentos da investigação</p><h1>Mandados<br><em>de busca.</em></h1><p>Selecione um envolvido para consultar as fotografias dos documentos. Toque em uma imagem para ampliar.</p></div>
+    <nav class="people" id="people" aria-label="Selecionar envolvido"></nav>
+    <section class="documents" aria-labelledby="person-name"><div class="documents-heading"><div><p class="eyebrow">documentos do envolvido</p><h2 id="person-name"></h2></div><p id="photo-count" role="status"></p></div><div id="gallery" class="gallery"></div></section>
+    <noscript>Ative o JavaScript para consultar os documentos.</noscript>
+  </main>
+  <dialog id="viewer" aria-label="Fotografia ampliada"><div class="viewer-bar"><p id="viewer-caption"></p><button id="close-viewer" type="button" aria-label="Fechar fotografia">Fechar ×</button></div><img id="viewer-image" alt=""><div class="viewer-controls"><button id="previous" type="button">← Anterior</button><a id="original" target="_blank" rel="noopener">Abrir original ↗</a><button id="next" type="button">Próxima →</button></div></dialog>
+</body>
+</html>

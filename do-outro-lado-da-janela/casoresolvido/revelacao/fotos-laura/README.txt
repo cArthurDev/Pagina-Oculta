@@ -1,0 +1,1 @@
+﻿As imagens foto-01.png e foto-02.png aparecem na resolução junto ao trecho em que Laura é encontrada viva. Para substituir as fotos, mantenha esses nomes. Fotos adicionais precisam ser vinculadas à página.
